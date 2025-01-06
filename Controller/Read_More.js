@@ -29,8 +29,6 @@ if (randomBlogs.length < 2) {
     // Combine the blogs from the same category and additional blogs
     randomBlogs = [...randomBlogs, ...additionalBlogs];
 }
-
-
         const Photo_Gallary = await Photo_Gallaries.find({}).lean();
 
         // Fetch the latest 5 blogs, sorted by creation date
