@@ -1,0 +1,76 @@
+.container2 {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.content {
+    display: flex;
+    gap: 20px;
+}
+.slider {
+    flex: 1;
+    position: relative;
+}
+.slider img {
+    width: 100%;
+    border-radius: 5px;
+    max-height: 400px;
+    max-width: 500px;
+    min-width: 500px;
+    min-height:400px ;
+}
+.slider .prev, .slider .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.slider .prev {
+    left: 10px;
+}
+.slider .next {
+    right: 10px;
+}
+.details {
+    flex: 2;
+}
+.tabs {
+    display: flex;
+    gap: 0px;
+    margin-bottom: 10px;
+}
+.tab {
+    flex: 1;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    text-align: center;
+    cursor: pointer;
+    
+}
+.tab.active {
+    background-color: #394464;
+    color: #fff;
+    border-color: #394464;
+}
+.tab-content {
+    padding: 10px;
+    font-size: 15px;
+    color: #333;
+    font-family: var(--theme-font-family);
+}
+.tab-content p {
+    margin: 0 0 10px;
+    font-family: "Gill Sans", sans-serif;
+}
+p{
+    font-family: "Gill Sans", sans-serif;
+}
