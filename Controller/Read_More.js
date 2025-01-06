@@ -49,7 +49,7 @@ if (randomBlogs.length < 2) {
             return acc;
         }, {});
 
-        res.render('Pages/Diet', { Blog, Photo_Gallary,latestBlogs,groupedBlogs,randomBlogs })
+        res.render('Pages/Read_more', { Blog, Photo_Gallary,latestBlogs,groupedBlogs,randomBlogs })
     } catch (error) {
         console.error(error);
         res.status(500).render("Pages/404", { error });
