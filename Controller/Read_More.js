@@ -5,7 +5,7 @@ export const index = async (req, res) => {
     try {
         const { id } = req.params
         console.log(id)
-        const Blog = await blog.findOne({ _id: id }).lean();
+        const Blog = await blog.findOne({ title: id }).lean();
          // Combine the titles and texts into the desired format
     const description = Blog.read_more_Titles.map((title, index) => ({
         title: title,
