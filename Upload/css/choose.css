@@ -9,7 +9,7 @@
     display: flex;
     align-items: flex-start; /* Align items to the top */
     position: relative;
-    width: 100%;
+    width: 100% !important;
   }
   
   .inner-scroll-container{
@@ -17,7 +17,7 @@
     display: flex;
     align-items: flex-start; /* Align items to the top */
     position: relative;
-   
+   width: 100% !important;
     padding: 30px 100px;
   }
   
@@ -103,3 +103,57 @@
     padding: 200px 20px;
     
   }
+
+  /* General Mobile View Adjustments */
+@media (max-width: 768px) {
+  .scroll-container, .scroll-container1 {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align content */
+  }
+
+  .inner-scroll-container {
+    flex-direction: column; /* Stack items vertically */
+    padding: 20px; /* Reduce padding for smaller screens */
+  }
+
+  .text {
+    width: 100%; /* Make text take full width */
+    padding: 0; /* Remove side padding */
+  }
+
+  .scroll-image, .scroll-image1 {
+    position: static; /* Remove sticky behavior for smaller screens */
+    margin: 20px 0; /* Add margin around the image for spacing */
+  }
+
+  .scroll-image img, .scroll-image1 img {
+    max-width: 90%; /* Scale images to fit within the screen width */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center align images */
+  }
+
+  
+
+  .dotted-list li::before {
+    left: -10px; /* Adjust bullet positioning */
+  }
+
+  .dotted-list {
+    padding-left: 10px; /* Adjust padding for mobile screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .heading-pages h1 {
+    font-size: 24px; /* Reduce font size for the main heading */
+    line-height: 1.2; /* Adjust line height for better spacing */
+  }
+
+  .heading-pages p {
+    font-size: 14px; /* Reduce breadcrumb font size */
+  }
+
+  .heading-pages a {
+    font-size: 14px; /* Ensure link text matches breadcrumb size */
+  }
+}
