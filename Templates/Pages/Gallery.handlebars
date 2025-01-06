@@ -269,17 +269,8 @@
 		
 
     <script>
-      // Image Slider Logic
-      let currentSlide = 0;
-      const images = [
-          "/images/about_1.jpg",
-          "/images/about_2.jpg"
-      ];
-
-      function changeSlide(direction) {
-          currentSlide = (currentSlide + direction + images.length) % images.length;
-          document.getElementById('slider-image').src = images[currentSlide];
-      }
+     
+	  
 
      // Function to initialize and hide empty tabs
     function initializeTabs() {
@@ -325,7 +316,7 @@
 
 </script>
 
-  <script src="js/header.js"></script>
+  <script src="/js/header.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const nav = document.querySelector(".site-nav ");
@@ -357,5 +348,17 @@
 	// Initial check to reset menu on page load
 	resetMenu();
   </script>
+
+  <script>
+	 // Image Slider Logic
+      let currentSlide = 0;
+      const images = {{{ all_images }}};  
+
+      function changeSlide(direction) {
+          currentSlide = (currentSlide + direction + images.length) % images.length;
+          document.getElementById('slider-image').src = "/images/Photo Gallery/"+images[currentSlide];
+      }
+
+</script>
 	</body>
 	</html>
