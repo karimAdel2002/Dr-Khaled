@@ -105,7 +105,7 @@
   }
 
   /* General Mobile View Adjustments */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .scroll-container, .scroll-container1 {
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center-align content */
@@ -123,7 +123,9 @@
 
   .scroll-image, .scroll-image1 {
     position: static; /* Remove sticky behavior for smaller screens */
-    margin: 20px 0; /* Add margin around the image for spacing */
+    margin: 10px 0; /* Add margin around the image for spacing */
+    width: 100%;
+    
   }
 
   .scroll-image img, .scroll-image1 img {
@@ -157,3 +159,4 @@
     font-size: 14px; /* Ensure link text matches breadcrumb size */
   }
 }
+
