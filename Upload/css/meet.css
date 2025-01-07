@@ -146,6 +146,9 @@
     .parent-div {
       grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet view */
     }
+    .slider-container{
+      min-width: 100%;
+    }
   }
   
   @media (max-width: 480px) {
