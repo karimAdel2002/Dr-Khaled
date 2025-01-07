@@ -134,7 +134,9 @@
     margin: 0 auto; /* Center align images */
   }
 
-  
+  iframe{
+    min-height: 400px;
+  }
 
   .dotted-list li::before {
     left: -10px; /* Adjust bullet positioning */
