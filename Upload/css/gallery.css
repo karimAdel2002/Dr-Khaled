@@ -13,14 +13,16 @@
 .slider {
     flex: 1;
     position: relative;
+   
 }
 .slider img {
     width: 100%;
     border-radius: 5px;
     max-height: 400px;
-    max-width: 500px;
-    min-width: 500px;
-    min-height:400px ;
+    max-width: 450px;
+   
+    
+    object-fit: cover; /* Ensures consistent image display */
 }
 .slider .prev, .slider .next {
     position: absolute;
@@ -32,6 +34,7 @@
     padding: 10px;
     cursor: pointer;
     border-radius: 50%;
+    z-index: 2; /* Ensures the arrows are above the images */
 }
 .slider .prev {
     left: 10px;
@@ -75,21 +78,51 @@ p{
     font-family: "Gill Sans", sans-serif;
 }
 
-@media (max-width: 768px) {
+
+@media (min-width:523px) and (max-width: 768px) {
     .content {
-        flex-direction: column;
+        flex-direction: column; /* Stack elements */
+        align-items: center; /* Center items */
+       
     }
+
     .slider {
-        order: 1;
-        position: relative; /* Keep relative positioning */
-        width: 100%; /* Make the slider responsive */
-        height: 300px; /* Adjust height for mobile view */
+        width: 100%  !important; /* Full width */
+        position: relative; /* Ensure arrows stay within the slider */
     }
-    .details {
-        order: 2;
+
+    .slider img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
     }
-    .slider .prev, .slider .next {
+
+    .slider .prev,
+    .slider .next {
         top: 50%;
         transform: translateY(-50%);
     }
+
+    .details {
+        width: 100%;
+        padding-top: 20px; /* Add spacing for clarity */
+    }
+
+    .tabs {
+        flex-direction: column; /* Stack tabs vertically */
+    }
+}
+@media (max-width: 523px) {
+    .slider img {
+        width: 100%;
+        max-width:450px;
+        height: auto;
+    }
+    .content {
+        flex-direction: column; /* Stack elements */
+        align-items: center; /* Center items */
+        max-width: 400px;
+      
+    }
+  
 }
