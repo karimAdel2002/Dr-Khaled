@@ -2,16 +2,23 @@
 var mobileModal = document.getElementById("mobileModal");
 var desktopModal = document.getElementById("desktopModal");
 
+// Variable to track whether the modal has been shown
+var modalShown = false;
+
 // Function to detect screen size and show the correct modal
 function showModal() {
-  if (window.innerWidth <= 1000) {
-    // Show mobile modal, hide desktop modal
-    mobileModal.style.display = "block";
-    desktopModal.style.display = "none";
-  } else {
-    // Show desktop modal, hide mobile modal
-    mobileModal.style.display = "none";
-    desktopModal.style.display = "block";
+  if (!modalShown) {
+    if (window.innerWidth <= 1000) {
+      // Show mobile modal, hide desktop modal
+      mobileModal.style.display = "block";
+      desktopModal.style.display = "none";
+    } else {
+      // Show desktop modal, hide mobile modal
+      mobileModal.style.display = "none";
+      desktopModal.style.display = "block";
+    }
+    // Set the flag to true after the modal is displayed
+    modalShown = true;
   }
 }
 
@@ -26,6 +33,3 @@ window.onclick = function (event) {
 
 // Trigger the modal logic when the page loads
 window.onload = showModal;
-
-// Update the modal dynamically when resizing the window
-window.onresize = showModal;
