@@ -158,17 +158,17 @@ align-items: center; /* Vertically center */
       .content {
         height: 100vh; }
       
-      .modal {
+      .modal2 {
         border-radius: 7px;
         overflow: hidden;
-        background-color: transparent; }
-        .modal .logo a img {
+        background-color: rgba(0, 0, 0, 0.5); }
+        .modal2 .logo a img {
           width: 30px; }
-        .modal .modal-content {
+        .modal2 .modal-content {
           background-color: transparent;
           border: none;
           border-radius: 7px; }
-          .modal .modal-content .modal-body {
+          .modal2 .modal-content .modal-body {
             border-radius: 7px;
             overflow: hidden;
             background-color: #fff;
@@ -176,28 +176,28 @@ align-items: center; /* Vertically center */
             padding-right: 0px;
             -webkit-box-shadow: 0 10px 50px -10px rgba(0, 0, 0, 0.9);
             box-shadow: 0 10px 50px -10px rgba(0, 0, 0, 0.9); }
-            .modal .modal-content .modal-body h2 {
+            .modal2 .modal-content .modal-body h2 {
               font-size: 18px; }
-            .modal .modal-content .modal-body p {
+            .modal2 .modal-content .modal-body p {
               color: #777;
               font-size: 14px; }
-            .modal .modal-content .modal-body h3 {
+            .modal2 .modal-content .modal-body h3 {
               color: #000;
               font-size: 22px; }
-            .modal .modal-content .modal-body .close-btn {
+            .modal2 .modal-content .modal-body .close-btn {
               color: #000; }
-            .modal .modal-content .modal-body .promo-img {
+            .modal2 .modal-content .modal-body .promo-img {
               -webkit-box-flex: 0;
               -ms-flex: 0 0 50%;
               flex: 0 0 50%; }
-              .modal .modal-content .modal-body .promo-img .price {
+              .modal2 .modal-content .modal-body .promo-img .price {
                 top: 20px;
                 left: 20px;
                 position: absolute;
                 color: #fff; }
-        .modal .btn {
+        .modal2 .btn {
           border-radius: 30px; }
-        .modal .warp-icon {
+        .modal2 .warp-icon {
           width: 80px;
           height: 80px;
           margin: 0 auto;
@@ -205,7 +205,7 @@ align-items: center; /* Vertically center */
           background: rgba(62, 100, 255, 0.05);
           color: #3e64ff;
           border-radius: 50%; }
-          .modal .warp-icon span {
+          .modal2 .warp-icon span {
             font-size: 40px;
             position: absolute;
             left: 50%;
