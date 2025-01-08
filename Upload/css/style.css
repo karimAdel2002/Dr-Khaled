@@ -1,4 +1,6 @@
-
+html, body {
+  overflow-x: hidden !important;
+}
 .site-mobile-menu {
   display: none; /* Hidden by default */
   position: fixed;
