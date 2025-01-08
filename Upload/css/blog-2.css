@@ -302,3 +302,14 @@ html {
    .card-title:hover {
      color: #003a99;
    }
+/* Responsive Design */
+@media (max-width: 768px) {
+  .custom-right-column {
+    order: 1; /* Make it appear first */
+    position: static; /* Remove sticky behavior */
+  }
+
+  .custom-left-column {
+    order: 2; /* Ensure it appears second */
+  }
+}
