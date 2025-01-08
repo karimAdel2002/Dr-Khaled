@@ -74,3 +74,22 @@
 p{
     font-family: "Gill Sans", sans-serif;
 }
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+    .slider {
+        order: 1;
+        position: relative; /* Keep relative positioning */
+        width: 100%; /* Make the slider responsive */
+        height: 300px; /* Adjust height for mobile view */
+    }
+    .details {
+        order: 2;
+    }
+    .slider .prev, .slider .next {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
