@@ -28,7 +28,7 @@
     position: fixed;
     top: 0;
     right: -100%; /* Initially off-screen */
-    height: 100vh;
+    height: 100%;
     width: 250px;
     padding: 2rem;
     transition: right 0.3s ease-in-out; /* Smooth slide-in effect */
