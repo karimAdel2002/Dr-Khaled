@@ -300,8 +300,8 @@ margin-right: 40px;
   
   /* Style for the image */
   .arrow-desktop {
-    height: 90px;
-    width: 90px;
+    height: 80px;
+    width: 80px;
   }
   
   /* Style for the text */
@@ -330,9 +330,9 @@ margin-right: 40px;
     color: white;
     font-family: cursive;
   }
-  .arrow-mobile{
-    height: 100px;
-    width: 100px;
-  margin-left: 30%;
+   .arrow-mobile{
+    height: 80px;
+    width: 80px;
+  margin-left: 50%;
   }
 
