@@ -57,13 +57,13 @@
     margin-top: 100px;
   }
   .scroll-image1 img {
-    min-width:500px; /* Adjust image size */
+    min-width:400px; /* Adjust image size */
     max-width: 400px;
     height: auto;
     min-height: 300px;
     border-radius: 20px;
     margin-top: 100px;
-    margin-right: 30px;
+    margin-right: 20px;
   }
   
 
