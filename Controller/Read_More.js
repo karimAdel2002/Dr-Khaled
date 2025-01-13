@@ -9,7 +9,7 @@ export const index = async (req, res) => {
          // Combine the titles and texts into the desired format
     const description = Blog.read_more_Titles.map((title, index) => ({
         title: title,
-        text: Blog.read_more_Texts[index],
+        text: Blog.read_more_Texts[index].replace(/\n/g, '<br>'),,
     }));
     // Update the Blog object with the new description field
     Blog.description = description;
