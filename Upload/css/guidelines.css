@@ -197,3 +197,32 @@
         padding: 200px 20px;
         
       }
+
+
+ @media (min-width:405px) and (max-width:410px){
+        .section{
+          max-width:350px;
+          margin-left: -50px;
+        }
+        .photo-gallery{
+          margin-left: -50px;
+        }
+      }
+      @media (min-width:411px) and (max-width:460px){
+        .section{
+          max-width:390px;
+          margin-left: -50px;
+        }
+        .photo-gallery{
+          margin-left: -50px;
+        }
+      }
+      @media (max-width:405px) {
+        .section{
+          max-width:300px;
+          margin-left: -50px;
+        }
+        .photo-gallery{
+          margin-left: -50px;
+        }
+      }
