@@ -2,12 +2,19 @@
   @media (max-width:430px) {
     [data-aos][data-aos][data-aos-delay="100"], body[data-aos-delay="100"] [data-aos] {
      margin-left: -20px;
+     max-width: 400px;
+
   }
   .photo-gallery{
-    margin-left: -20px;
+    margin-left: -60px;
+    
+  }
+  .moving-background2 {
+   
+    margin-left: -60px;
   }
   }
-  
+
 .img-fluid{
     height: 400px !important;
     width: 500px;
@@ -166,7 +173,7 @@ align-items: center; /* Vertically center */
       .content {
         height: 100vh; }
       
-    .modal2 {
+      .modal2 {
         border-radius: 7px;
         overflow: hidden;
         background-color: rgba(0, 0, 0, 0.6); 
