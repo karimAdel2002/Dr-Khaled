@@ -171,7 +171,7 @@
             .icons,
             .icons-height {
               margin-bottom: 2px; /* Add spacing below the image */
-                   min-height: 100px;
+              min-height: 100px;
               min-width: 100px;
             }
           }
@@ -198,8 +198,7 @@
         
       }
 
-
- @media (min-width:405px) and (max-width:410px){
+      @media (min-width:405px) and (max-width:410px){
         .section{
           max-width:350px;
           margin-left: -50px;
