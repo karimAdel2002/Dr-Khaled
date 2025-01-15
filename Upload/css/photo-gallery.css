@@ -162,7 +162,7 @@ align-items: center; /* Vertically center */
         border-radius: 7px;
         overflow: hidden;
         background-color: rgba(0, 0, 0, 0.6); 
-        z-index: 2000 !important; /* Set a high z-index */
+        z-index: 3000 !important; /* Set a high z-index */
         position: fixed; /* Ensure it stays fixed on the viewport */
         top: 0;
         left: 0;
