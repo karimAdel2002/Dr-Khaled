@@ -1,3 +1,16 @@
+@media (max-width:450px){
+  .scroll-container {
+    max-width: 350px;
+    margin-left: -30px;
+  }
+  .scroll-container1 {
+    max-width: 390px;
+    margin-left: -30px;
+  }
+ 
+  
+}
+@media (min-width:435px) and (max-width:435px){}
 .scroll-container {
     display: flex;
     align-items: flex-start; /* Align items to the top */
@@ -49,15 +62,15 @@
   }
   
   .scroll-image img {
-    min-width:300px; /* Adjust image size */
+    min-width:200px; /* Adjust image size */
     max-width: 400px;
     height: auto;
-    min-height: 300px;
+    min-height: 200px;
     border-radius: 20px;
     margin-top: 100px;
   }
   .scroll-image1 img {
-    min-width:400px; /* Adjust image size */
+    min-width:300px; /* Adjust image size */
     max-width: 400px;
     height: auto;
     min-height: 300px;
@@ -125,12 +138,13 @@
     position: static; /* Remove sticky behavior for smaller screens */
     margin: 10px 0; /* Add margin around the image for spacing */
     width: 100%;
-    
+   
   }
 
   .scroll-image img, .scroll-image1 img {
-    max-width: 90%; /* Scale images to fit within the screen width */
+    max-width: 100%; /* Scale images to fit within the screen width */
     height: auto; /* Maintain aspect ratio */
+    
     margin: 0 auto; /* Center align images */
   }
 
@@ -149,16 +163,16 @@
 
 @media (max-width: 768px) {
   .heading-pages h1 {
-    
+    font-size: 20px !important; /* Reduce font size for the main heading */
     line-height: 1.2; /* Adjust line height for better spacing */
   }
 
   .heading-pages p {
-    font-size: 14px; /* Reduce breadcrumb font size */
+    font-size: 12px; /* Reduce breadcrumb font size */
   }
 
   .heading-pages a {
-    font-size: 14px; /* Ensure link text matches breadcrumb size */
+    font-size: 12px; /* Ensure link text matches breadcrumb size */
   }
 }
 
