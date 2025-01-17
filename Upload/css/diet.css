@@ -12,8 +12,8 @@
   }
  
   .scroll-image img {
-    max-width: 350px !important;
-    min-width: 300px !important;
+    max-width: 320px !important;
+    min-width: 290px !important;
     max-width: 40%;
     height: auto;
    margin-top: -10px !important;
