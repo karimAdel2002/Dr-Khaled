@@ -9830,6 +9830,15 @@ width: 100%;}
     justify-content: center !important; /* Centers horizontally */
   align-items: center !important; /* Centers vertically */
         }
+ @media (max-width: 768px) {
+          .container1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+          }
+       
+        }
 
 .carousel1 {
   overflow: hidden;
