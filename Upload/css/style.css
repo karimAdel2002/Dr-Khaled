@@ -9827,6 +9827,8 @@ width: 100%;}
          height: auto;
          width: 90%;
          align-items: center; 
+    justify-content: center !important; /* Centers horizontally */
+  align-items: center !important; /* Centers vertically */
         }
 
 .carousel1 {
