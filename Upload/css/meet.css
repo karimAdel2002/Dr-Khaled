@@ -1,9 +1,4 @@
-.img-fluid {
-    max-width: 90%;
-    height: auto;
-    border-radius: 10px;
-}
-  
+
   /* Slider Container */
   .slider-container {
     position: relative;
@@ -141,7 +136,7 @@
     -webkit-backdrop-filter: blur(30px); /* For Safari */
     box-shadow: 0 0 10px rgba(27, 84, 255, 0.6); 
     border-radius: 10px; /* Rounded corners (optional) */
-    padding: 20px; /* Space inside the div */
+    padding: 20px 0; /* Space inside the div */
     color: black; /* Text color */
     text-align: center; /* Center-align the text */
   }
@@ -152,7 +147,8 @@
       grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet view */
     }
     .slider-container{
-      min-width: 100%;
+      min-width: 80%;
+      margin-right: 50px;
     }
   }
   
@@ -163,7 +159,12 @@
     .row{margin-left: -20px;}
   }
 
-  
+
+.img-fluid {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+}
   
   .moving-background2 {
     position: relative;
