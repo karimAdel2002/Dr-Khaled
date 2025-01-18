@@ -57,7 +57,7 @@
   }
   
   .distinct-logo img {
-    max-width: 350px;
+  max-width: 290px !important;
     max-height: 300px;
     margin-right: 10px;
   }
