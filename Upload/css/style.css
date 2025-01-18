@@ -9800,6 +9800,10 @@ text-decoration: none; }
   color: white;
   padding: 70px 0; 
 width: 100%;}
+ .site-footer ol,
+    .site-footer ul{
+    color: white !important;
+    }
   .site-footer a {
      color: white !important;
     text-decoration: none;
