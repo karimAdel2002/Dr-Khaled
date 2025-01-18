@@ -147,8 +147,8 @@
       grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet view */
     }
     .slider-container{
-      min-width: 80%;
-      margin-right: 50px;
+      min-width: 85%;
+     
     }
   }
   
@@ -156,7 +156,7 @@
     .parent-div {
       grid-template-columns: 1fr; /* 1 column for mobile view */
     }
-    .row{margin-left: -20px;}
+   
   }
 
 
