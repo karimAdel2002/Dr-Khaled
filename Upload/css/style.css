@@ -10078,14 +10078,18 @@ width: 100%;}
   text-decoration: none;
 }
 
-.heading-pages{
+.heading-pages {
+  display: flex; /* Enables Flexbox */
+  flex-direction: column; /* Aligns children in a column */
+  justify-content: flex-end; /* Pushes content to the bottom */
+  align-items: flex-start; /* Aligns content to the left */
   width: 100%;
   height: 200px !important;
   background-color: #0E1A3C;
   color: white;
-  padding: 40px 150px !important;
+  padding-left: 100px; /* Adds space from the left */
+  padding-bottom: 20px; /* Adds some space from the bottom */
   font-family: var(--theme-font-family);
-
 }
 .heading-pages h1{
   font-family: var(--theme-font-family);
