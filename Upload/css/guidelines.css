@@ -103,6 +103,7 @@
             .custom-container .custom-div-height,
             .custom-container .custom-div-width {
           flex-basis: 100%; /* Full width for each div */
+                        width: 200px !important;
         }
       }
       .custom-row {
