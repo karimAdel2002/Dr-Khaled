@@ -9801,7 +9801,8 @@ text-decoration: none; }
   padding: 70px 0; 
 width: 100%;}
   .site-footer a {
-    color: #265AEF;
+     color: white !important;
+    text-decoration: none;
     position: relative;
     display: inline-block; }
   .site-footer .btn:before {
@@ -9848,6 +9849,19 @@ width: 100%;}
         .footer-headers{
           color: white !important;
         }
+ /* Ensure Contact header stays left-aligned on mobile */
+@media (max-width: 768px) {
+  .site-footer .widget h3, 
+  .site-footer .widget .h3,
+  .site-footer .widget ul{
+      text-align: left; /* Align text to the left */
+      padding-left: 10px !important; /* Optional: adjust padding */
+  }
+
+  .site-footer .widget ul {
+      padding-left: 10px; /* Optional: add padding to the list items */
+  }
+}
 
 .home-slider{
           background-color: white;
