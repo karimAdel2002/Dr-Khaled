@@ -2,22 +2,19 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  display: flex;
-  justify-content: center; /* Horizontally center content */
-  align-items: center; /* Vertically center content */
+  
+  justify-content: center !important; /* Horizontally center content */
+  align-items: center center !important; /* Vertically center content */
   min-height: 100vh; /* Make body take full viewport height */
 }
 
-.container {
-  width: 90%; /* Adjust for mobile-friendly view */
-  max-width: 1200px; /* Prevent it from becoming too wide */
-  margin: auto; /* Center container horizontally */
-}
+
 
 /* Mobile-Specific Styling */
 @media (max-width: 768px) {
   body {
       flex-direction: column; /* Stack content vertically */
+      display: flex !important;
   }
 
   .container {
@@ -39,12 +36,12 @@ body {
   }
  
   .scroll-image img {
-    max-width: 320px !important;
-    min-width: 290px !important;
+    max-width: 350px !important;
+    min-width: 300px !important;
     max-width: 40%;
     height: auto;
    margin-top: -10px !important;
-    margin-left: 10px !important;
+    margin-left: 20px !important;
     margin-bottom: 70px;
   }
   .text {
@@ -64,7 +61,7 @@ body {
   min-height: 300px;
   border-radius: 20px;
   margin-top: 10px  !important;
-  margin-left: 10px !important;
+  margin-left: 20px !important;
 }
 
 }
@@ -84,12 +81,12 @@ body {
   }
  
   .scroll-image img {
-    max-width: 440px !important;
-    min-width: 390px !important;
+    max-width: 450px !important;
+    min-width: 400px !important;
     max-width: 40%;
     height: auto;
    margin-top: -10px !important;
-    margin-left: 10px !important;
+    margin-left: 20px !important;
     margin-bottom: 70px;
   }
   .text {
@@ -109,7 +106,7 @@ body {
   min-height: 300px;
   border-radius: 20px;
   margin-top: 10px  !important;
-  margin-left: 10px !important;
+  margin-left: 20px !important;
 }
 
 }
@@ -147,7 +144,7 @@ body {
 .scroll-image1 img {
  
   max-width: 550px !important;
-  min-width: 470px !important;
+  min-width: 400px !important;
   height: auto;
   max-height: 500px;
   min-height: 300px;
@@ -181,7 +178,7 @@ body {
   
   .text {
     flex: 1; /* Takes up remaining space */
-    
+    padding-right: 30px;
     width: 70%;
     font-family: var(--theme-font-family);
     margin-top: 100px;
