@@ -181,7 +181,7 @@ body {
   
   .text {
     flex: 1; /* Takes up remaining space */
-    padding-right: 30px;
+    
     width: 70%;
     font-family: var(--theme-font-family);
     margin-top: 100px;
