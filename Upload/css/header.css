@@ -53,12 +53,9 @@
     width: 100%;
     height: 60px;
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    position: fixed !important; 
   }
-  .unique-navbar.scrolled {
-    background-color: white; /* White background */
-    color: #525252; /* Font color when scrolled */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
-  }
+
   
   .unique-navbar:hover {
     color: #1B54FF;
@@ -79,12 +76,6 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Navbar when scrolled */
-.unique-navbar.scrolled {
-  background-color: white; /* White background when scrolled */
-  color: #1B54FF; /* Update link color */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better effect */
-}
 
 /* Link colors */
 .uncommon-link {
@@ -103,9 +94,7 @@
     margin-right: 10px;
     transition: filter 0.3s ease;
   }
-  .unique-navbar.scrolled .distinct-logo img {
-    filter: brightness(0) invert(1); /* Change logo to a dark version or inverted color */
-  }
+
   /* Menu Styles */
   .rare-menu {
     display: none; /* Default hidden for mobile view */
@@ -149,14 +138,7 @@
     cursor: pointer;
   }
   
-  .exclusive-toggle span {
-    background-color: #2C4765;
-    height: 3px;
-    width: 25px;
-    margin-left: 20px;
-   margin-right: -70px;
-  }
-  
+ 
 
   
   /* Mobile View */
@@ -306,7 +288,7 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    width: 250px; /* Set width as needed */
+    width: 200px; /* Set width as needed */
     z-index: 1000;
   }
   
@@ -337,11 +319,6 @@
     display: block;
   }
   
-
-
-
-
-
 
 
   .modal2 {
@@ -422,3 +399,28 @@ margin-right: 40px;
   margin-left: 50%;
   }
 
+
+
+  
+  .unique-navbar.scrolled {
+    background-color: white !important;
+    color: #000 !important; /* Dark text color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for effect */
+  }
+  
+  .unique-navbar.scrolled .distinct-logo img {
+    filter: invert(1); /* Invert logo color */
+  }
+  
+  .unique-navbar.scrolled .uncommon-link {
+    color: #555555 !important; /* Update link color */
+  }
+  
+  .distinct-logo img {
+    filter: none !important; /* Ensure no filter is applied */
+  }
+  @media (max-width: 1000px) {
+    .unique-navbar.scrolled .uncommon-link {
+      color: white !important; /* Color for mobile when scrolled */
+    }
+  }
