@@ -1,3 +1,46 @@
+/* Menu Toggle Styling */
+.menu-toggle {
+  display: none; /* Hidden by default */
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.menu-toggle .toggle-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-right: 10px; /* Space between lines and text */
+}
+
+.menu-toggle .toggle-lines span {
+  display: block;
+  /* Adjust line width */
+  height: 3px; /* Line thickness */
+  background-color: #4c4b4b; /* Line color */
+  border-radius: 3px; /* Rounded edges */
+}
+
+.menu-toggle .menu-text {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #4c4b4b;
+}
+
+.menu-toggle .toggle-lines span:first-child {
+  margin-left: auto; /* Align the first line to the right */
+  width: 15px; /* Optional: Adjust the width of the first line */
+}
+
+/* Responsive Styling: Show Menu Toggle in Mobile View */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex; /* Show the toggle only in mobile view */
+  }
+}
+
 .unique-navbar {
     display: flex;
     justify-content: space-between;
