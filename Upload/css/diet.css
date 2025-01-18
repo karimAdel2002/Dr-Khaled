@@ -15,14 +15,19 @@ body {
   body {
       flex-direction: column; /* Stack content vertically */
       display: flex !important;
+      justify-content: center !important; /* Horizontally center content */
+  align-items: center center !important; /* Vertically center content */
+  min-height: 100vh; /* Make body take full viewport height */
   }
 
   .container {
       text-align: center; /* Center text for better readability */
   }
+
+ 
 }
 
-@media (max-width: 410px) {
+@media (max-width: 411px) {
   .inner-scroll-container {
     flex-direction: column;
     padding: 20px;
@@ -30,18 +35,15 @@ body {
   .two-column-layout {
     flex-direction: column;
   }
-  .section{
-    margin-left: 10px !important;
-    
-  }
+
  
   .scroll-image img {
-    max-width: 350px !important;
-    min-width: 300px !important;
+    max-width: 300px !important;
+    min-width: 200px !important;
     max-width: 40%;
     height: auto;
    margin-top: -10px !important;
-    margin-left: 20px !important;
+   
     margin-bottom: 70px;
   }
   .text {
@@ -49,19 +51,17 @@ body {
     width: 80% !important;
     font-family: var(--theme-font-family);
     margin-top: 10px !important;
-    margin-left: 20px;
+   
     
 }
 .scroll-image1 img {
- 
-  max-width: 400px !important;
-  min-width: 350px !important;
+  max-width: 300px !important;
+  min-width: 200px !important;
   height: auto;
-  max-height: 500px;
-  min-height: 300px;
+
   border-radius: 20px;
   margin-top: 10px  !important;
-  margin-left: 20px !important;
+ 
 }
 
 }
@@ -75,18 +75,19 @@ body {
   .two-column-layout {
     flex-direction: column;
   }
-  .section{
-    margin-left: 10px !important;
-    
+
+  .scroll-container1{
+    width: auto;
   }
  
+ 
   .scroll-image img {
-    max-width: 450px !important;
-    min-width: 400px !important;
+    max-width: 350px !important;
+    min-width: 300px !important;
     max-width: 40%;
     height: auto;
    margin-top: -10px !important;
-    margin-left: 20px !important;
+   
     margin-bottom: 70px;
   }
   .text {
@@ -94,19 +95,18 @@ body {
     width: 80% !important;
     font-family: var(--theme-font-family);
     margin-top: 10px !important;
-    margin-left: 20px;
+  
     
 }
 .scroll-image1 img {
  
-  max-width: 450px !important;
-  min-width: 400px !important;
+  max-width: 350px !important;
+  min-width: 300px !important;
   height: auto;
-  max-height: 500px;
-  min-height: 300px;
+ 
   border-radius: 20px;
   margin-top: 10px  !important;
-  margin-left: 20px !important;
+  
 }
 
 }
@@ -119,9 +119,9 @@ body {
   .two-column-layout {
     flex-direction: column;
   }
-  .section{
-    margin-left: 10px !important;
-    
+
+  .scroll-container1{
+    width: auto;
   }
  
   .scroll-image img {
@@ -130,7 +130,7 @@ body {
     max-width: 40%;
     height: auto;
    margin-top: -10px !important;
-    margin-left: 20px !important;
+   
     margin-bottom: 70px;
   }
   .text {
@@ -138,7 +138,7 @@ body {
     width: 80% !important;
     font-family: var(--theme-font-family);
     margin-top: 10px !important;
-    margin-left: 20px;
+    
     
 }
 .scroll-image1 img {
@@ -150,21 +150,40 @@ body {
   min-height: 300px;
   border-radius: 20px;
   margin-top: 10px  !important;
-  margin-left: 20px !important;
+ 
 }}
 
+
 .scroll-container {
-    display: flex;
-    align-items: flex-start; /* Align items to the top */
-    position: relative;
-    width: 100%;
-    background-color: #F0F5FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F0F5FF;
+ 
+}
+
+.scroll-container > * {
+  width: 70%; /* Set 70% width for normal view */
+}
+
+@media (max-width: 768px) { /* Mobile view */
+  .scroll-container > * {
+    width: auto; /* Adjust width */
+    text-align: center !important; /* Optional: Center text if applicable */
+   
   }
+  .scroll-container .inner-scroll-container{
+    margin-left: 100px;
+  }
+}
+
+
   .scroll-container1 {
     display: flex;
     align-items: flex-start; /* Align items to the top */
     position: relative;
-    width: 100%;
+    width: 70%;
+    
   }
   
   .inner-scroll-container{
@@ -172,7 +191,8 @@ body {
     display: flex;
     align-items: flex-start; /* Align items to the top */
     position: relative;
-   
+    justify-content: center !important; /* Horizontally center content */
+  align-items: center center !important; /* Vertically center content */
     padding: 0px 0px;
   }
   
@@ -354,3 +374,5 @@ body {
     ol{
         margin-left: 30px;
     }
+
+    
