@@ -344,5 +344,47 @@
 </script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
+			<script>
+  // Select the navbar and logo elements
+  const navbar = document.querySelector(".unique-navbar");
+  const logo = document.querySelector(".distinct-logo img");
+  const links = document.querySelectorAll(".uncommon-link");
+
+  // Paths for the original and scrolled state logos
+  const originalLogoSrc = "/images/white-logo.png"; // Replace with the path to your original logo
+  const scrolledLogoSrc = "/images/black-logo.png"; // Replace with the path to your scrolled state logo
+
+  // Function to handle scroll behavior
+  function handleScroll() {
+    if (window.scrollY > 0) {
+      // Add scrolled class when the user scrolls down
+      navbar.classList.add("scrolled");
+      // No need to modify navbar style directly for background color, it's handled in CSS
+
+      // Update logo for scrolled state
+      logo.src = scrolledLogoSrc;
+
+      // Update link colors
+      links.forEach((link) => {
+        link.style.color = "#white"; // Dark links for scrolled state
+      });
+    } else {
+      // Remove scrolled class when at the top of the page
+      navbar.classList.remove("scrolled");
+
+      // Revert logo to default state
+      logo.src = originalLogoSrc;
+
+      // Reset link colors to inherit the default color
+      links.forEach((link) => {
+        link.style.color = "white";
+      });
+    }
+  }
+
+  // Attach the scroll event listener
+  window.addEventListener("scroll", handleScroll);
+</script>
+
 	</body>
 	</html>
