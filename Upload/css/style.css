@@ -10371,3 +10371,18 @@ border-radius: 10px; }
   max-width: 300px !important;
   margin-top: -80px
 }
+
+
+@media screen and (max-width: 768px) {
+  .content {
+    font-size: 14px; /* Adjust font sizes */
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .content {
+    font-size: 12px; /* Further adjust for smaller screens */
+    text-align: center;
+  }
+}
