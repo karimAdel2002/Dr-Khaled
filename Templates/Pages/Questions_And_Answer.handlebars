@@ -110,12 +110,39 @@
 
 </style> --}}
 <style>
+	body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center; /* Horizontally center content */
+  align-items: center; /* Vertically center content */
+  min-height: 100vh; /* Make body take full viewport height */
+}
+
+.container {
+  width: 90%; /* Adjust for mobile-friendly view */
+  max-width: 1200px; /* Prevent it from becoming too wide */
+  margin: auto; /* Center container horizontally */
+}
+
+/* Mobile-Specific Styling */
+@media (max-width: 768px) {
+  body {
+      flex-direction: column; /* Stack content vertically */
+  }
+
+  .container {
+      text-align: center; /* Center text for better readability */
+  }
+}
+	
 	section h3, h2{
 font-family: Verdana, sans-serif;
 	}
 	/* General container styles */
 .categories-container {
-  width: 80%;
+  
   margin: 0 auto; /* Center horizontally */
   padding: 20px;
   background-color: #f9f9f9; /* Optional background color */
