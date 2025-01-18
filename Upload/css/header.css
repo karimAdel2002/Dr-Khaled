@@ -43,7 +43,7 @@
 
 
 .unique-navbar {
-    display: flex;
+    display: flex !important;
     position: sticky !important;
     justify-content: space-between;
     align-items: center;
@@ -88,12 +88,7 @@
   color: #525252; /* Darker color for links when scrolled */
 }
 
-  .distinct-logo img {
-    max-width: 290px !important;
-    max-height: 300px;
-    margin-right: 10px;
-    transition: filter 0.3s ease;
-  }
+
 
   /* Menu Styles */
   .rare-menu {
@@ -155,10 +150,7 @@
     .uncommon-link {
       color: #FFF; /* White text color for better visibility */
     }
-    .distinct-logo img {
-        max-width: 300px; /* Further reduce logo size */
-        max-height: 250px;
-      }
+    
   }
   @media (max-width: 667px) and (min-width:610px)  {
     .exclusive-toggle {
@@ -173,11 +165,7 @@
     .uncommon-link {
       color: #FFF; /* White text color for better visibility */
     }
-    .distinct-logo img {
-        max-width: 290px; /* Further reduce logo size */
-        max-height: 240px;
-        margin-left: -30px;
-      }
+   
   }
   @media (max-width: 610px)  {
     .exclusive-toggle {
@@ -192,11 +180,7 @@
     .uncommon-link {
       color: #FFF; /* White text color for better visibility */
     }
-    .distinct-logo img {
-        max-width: 290px; /* Further reduce logo size */
-        max-height: 240px;
-        margin-left: -70px;
-      }
+   
   }
   
   /* Desktop View */
@@ -218,11 +202,7 @@
       padding: 0 30px; /* Further reduce padding */
     }
   
-    .distinct-logo img {
-      max-width: 300px; /* Further reduce logo size */
-      max-height: 250px;
-    }
-  
+   
     .rare-menu {
       gap: 0.8rem; /* Tighten spacing further */
     }
@@ -237,11 +217,7 @@
       padding: 0 30px; /* Further reduce padding */
     }
   
-    .distinct-logo img {
-      max-width: 300px; /* Further reduce logo size */
-      max-height: 250px;
-    }
-  
+   
     .rare-menu {
       gap: 1rem; /* Tighten spacing further */
     }
@@ -424,3 +400,40 @@ margin-right: 40px;
       color: white !important; /* Color for mobile when scrolled */
     }
   }
+
+  /* Default logo size */
+.distinct-logo img {
+  max-width: 320px; /* Default width */
+  max-height: 300px; /* Default height */
+  transition: max-width 0.3s ease, max-height 0.3s ease; /* Smooth transition */
+  margin-right: 10px;
+}
+
+/* Medium screen size */
+@media (max-width: 1200px) {
+  .distinct-logo img {
+      max-width: 300px !important; /* Adjust width */
+      max-height: 260px !important ; /* Adjust height */
+      
+  }
+}
+
+/* Small screen size */
+@media (max-width: 900px) {
+  .distinct-logo img {
+      max-width: 280px !important; /* Adjust width */
+      max-height: 220px !important; /* Adjust height */
+  }
+}
+
+/* Extra small screen size (e.g., mobile) */
+@media (max-width: 600px) {
+  .distinct-logo img {
+      max-width: 260px !important; /* Adjust width */
+      max-height: 190px !important; /* Adjust height */
+      margin-left: -70px;
+  }
+}
+.distinct-logo img {
+  transition: max-width 0.3s ease, max-height 0.3s ease !important;
+}
