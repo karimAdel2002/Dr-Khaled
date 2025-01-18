@@ -1,6 +1,6 @@
 .container2 {
     max-width: 1200px;
-    
+    margin: 20px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 5px;
@@ -8,7 +8,7 @@
 }
 @media (max-width:430px){
     .container2 {
-   margin-left: -55px;
+  
     max-width: 410px;
     }
 }
@@ -121,7 +121,7 @@ p{
 @media (max-width: 523px) {
     .slider img {
         width: 100%;
-        max-width:400px;
+        max-width:450px;
         height: auto;
     }
     .content {
