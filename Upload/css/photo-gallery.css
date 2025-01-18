@@ -1,22 +1,4 @@
 
-  @media (max-width:430px) {
-    [data-aos][data-aos][data-aos-delay="100"], body[data-aos-delay="100"] [data-aos] {
-     margin-left: -20px;
-     max-width: 400px;
-
-  }
-  .photo-gallery{
-    margin-left: -60px;
-    
-  }
-  .moving-background2 {
-   
-    margin-left: -60px;
-  }
-     .img-fluid{
-    margin-left: -20px;
-}
-  }
 
 .img-fluid{
     height: 400px !important;
