@@ -10,19 +10,23 @@
  
   
 }
-@media (min-width:435px) and (max-width:435px){}
+
 .scroll-container {
     display: flex;
     align-items: flex-start; /* Align items to the top */
     position: relative;
     width: 100%;
     background-color: #F0F5FF;
+    justify-content: center;   /* Centers content horizontally */
+    align-items: center; 
   }
   .scroll-container1 {
     display: flex;
     align-items: flex-start; /* Align items to the top */
     position: relative;
     width: 100% !important;
+    justify-content: center;   /* Centers content horizontally */
+    align-items: center; 
   }
   
   .inner-scroll-container{
@@ -57,11 +61,12 @@
     text-align: justify;
   }
   .scroll-image,.scroll-image1 {
-    position: sticky; /* Keeps the image "movable" as you scroll */
+    position: sticky !important; /* Keeps the image "movable" as you scroll */
     top: 10px; /* Distance from the top when scrolling */
   }
   
   .scroll-image img {
+    position: sticky !important; /* Keeps the image "movable" as you scroll */
     min-width:200px; /* Adjust image size */
     max-width: 400px;
     height: auto;
@@ -70,6 +75,7 @@
     margin-top: 100px;
   }
   .scroll-image1 img {
+    position: sticky !important; /* Keeps the image "movable" as you scroll */
     min-width:300px; /* Adjust image size */
     max-width: 400px;
     height: auto;
@@ -78,7 +84,10 @@
     margin-top: 100px;
     margin-right: 20px;
   }
-  
+  image1 {
+    position: sticky !important;
+    top: 10px;
+}
 
   .dotted-list {
     list-style-type: none; /* Remove default bullets */
@@ -122,6 +131,7 @@
   .scroll-container, .scroll-container1 {
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center-align content */
+    
   }
 
   .inner-scroll-container {
@@ -135,7 +145,7 @@
   }
 
   .scroll-image, .scroll-image1 {
-    position: static; /* Remove sticky behavior for smaller screens */
+    position: static !important; /* Remove sticky behavior for smaller screens */
     margin: 10px 0; /* Add margin around the image for spacing */
     width: 100%;
    
@@ -175,4 +185,6 @@
     font-size: 12px; /* Ensure link text matches breadcrumb size */
   }
 }
-
+.scroll-container {
+  overflow: visible !important;
+}
