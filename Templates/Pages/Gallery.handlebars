@@ -48,6 +48,135 @@
     font-size: 14px; /* Ensure link text matches breadcrumb size */
   }
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+  .carousel {
+    max-width: 100%;
+  }
+   .carousel-inner img {
+    height: 200px; /* Adjust height for smaller screens */
+  }
+}
+
+.carousel {
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.carousel-inner img {
+  object-fit: cover; /* Ensure images fit well */
+  height: auto;
+  border-radius: 10px;
+  width: 100%; /* Ensures the image takes the full width of its container */
+  height: 300px; /* Set a fixed height */
+}
+
+/* Customize carousel indicators (dots instead of squares) */
+.carousel-indicators button {
+  width: 12px !important; /* Width of the dots */
+  height: 12px !important; /* Height of the dots */
+  border-radius: 50% !important; /* Make the dots circular */
+  background-color: gray !important; /* Default gray color for the dots */
+  border: none !important; /* Remove border around the dots */
+  transition: background-color 0.3s ease; /* Smooth transition for color change */
+}
+
+.carousel-indicators .active {
+  background-color: rgb(54, 51, 51) !important; /* Darker gray when active */
+}
+{{!-- .carousel-indicators [data-bs-target] {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 10px;
+    height: 1px;
+    padding: 0;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    opacity: 1;
+    transition: opacity .6s ease;
+} --}}
+.carousel-indicators .active {
+  background-color: black; /* Active dot color */
+}
+
+/* Small white arrows for carousel controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  opacity: 1;
+}
+
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M3.5 0L4.5 1 2 3.5 4.5 6 3.5 7 0 3.5 3.5 0z'/%3E%3C/svg%3E");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  opacity: 1 !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M4.5 0L3.5 1 6 3.5 3.5 6 4.5 7 8 3.5 4.5 0z'/%3E%3C/svg%3E");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  opacity: 1 !important;
+}
+
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  
+  color: gray;
+}
+{{!-- .carousel-indicators [data-bs-target] {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 10px;
+    height: 1px;
+    padding: 0;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: black;
+    background-clip: padding-box;
+    border: 0;
+  
+   
+    /* border-bottom: 10px solid transparent; */
+    opacity: 1;
+    transition: opacity .6s ease;
+} --}}
+.carousel-indicators {
+  position: static; /* Remove absolute positioning to move below the slider */
+  margin-top: 15px; /* Add some spacing between the slider and the dots */
+  display: flex;
+  justify-content: center; /* Center the dots under the slider */
+  gap: 10px; /* Add spacing between the dots */
+}
 </style>
 	<title>Guidelines </title>
   
@@ -120,14 +249,42 @@
 	<div class="container2">
     <div class="content">
         <!-- Image Slider -->
-        <div class="slider">
-            <img src="/images/Photo Gallery/{{First_Image}}" alt="Before and After" id="slider-image">
-            <button class="prev" onclick="changeSlide(-1)">❮</button>
-            <button class="next" onclick="changeSlide(1)">❯</button>
-            <div>
-              <p style="color: #394464;">Click the image to expand. It'll open the image in full screen for a closer look.</p>
-            </div>
+     <div class="col-lg-6 col-12 mb-4">
+      <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel" style="max-width: 70%; margin: 0 auto;">
+        
+
+        <!-- Carousel Images -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+          <img src="/images/before2.jpg" class="d-block w-100 rounded" alt="Image 1">          </div>
+          <div class="carousel-item">
+            <img src="/images/before2.jpg" class="d-block w-100 rounded" alt="Image 2">
+          </div>
+          <div class="carousel-item">
+            <img src="/images/before3.jpg" class="d-block w-100 rounded" alt="Image 3">
+          </div>
         </div>
+        <!-- Indicators (Dots) -->
+        <div class="carousel-indicators" >
+          <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#imageCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <!-- Carousel Controls (Small White Arrows) -->
+       <!-- Carousel Controls -->
+<button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="visually-hidden">Next</span>
+</button>
+
+      </div>
+      <p class="mt-2 text-center">Click the image to expand. It'll open in full screen for a closer look.</p>
+    </div>
 
         <!-- Procedure Details -->
         <div class="details">
