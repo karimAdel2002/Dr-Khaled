@@ -60,6 +60,9 @@
   .unique-navbar:hover {
     color: #1B54FF;
   }
+.dropdown-link:hover{
+  text-decoration: none;
+}
   /* Default transparent navbar */
 .unique-navbar {
   display: flex;
@@ -112,7 +115,7 @@
   }
   
   .uncommon-link {
-    text-decoration: none;
+    text-decoration: none !important;
     color: #4E4E4E;
     font-family: var(--theme-font-family) !important;
     font-weight: 500 !important;
