@@ -46,6 +46,32 @@
     font-size: 14px; /* Ensure link text matches breadcrumb size */
   }
 }
+	/* Ensure images are sticky on larger screens */
+@media (min-width: 1001px) {
+  .scroll-image img, .scroll-image1 img {
+    position: sticky !important;
+    top: 10px !important;
+    z-index: 10; /* Optional, to keep them above overlapping elements */
+  }
+
+  /* Ensure the parent container does not interfere */
+  .scroll-container, .scroll-container1 {
+    overflow: visible !important;
+  }
+
+  /* Ensure all ancestor elements allow sticky positioning */
+  html, body, .scroll-container, .scroll-container1 {
+    overflow: unset !important;
+    position: relative !important;
+  }
+}
+
+/* Reset images for smaller screens */
+@media (max-width: 1000px) {
+  .scroll-image img, .scroll-image1 img {
+    position: static !important;
+  }
+}
 </style>
 	<title>Diet and Nutrition </title>
 </head>
