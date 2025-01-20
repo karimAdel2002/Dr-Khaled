@@ -1,6 +1,6 @@
 .img-fluid{
     height: 100% !important;
-    width: 80%;
+    width: 100%;
 }
 
 
@@ -103,7 +103,6 @@
             .custom-container .custom-div-height,
             .custom-container .custom-div-width {
           flex-basis: 100%; /* Full width for each div */
-                        width: 200px !important;
         }
       }
       .custom-row {
@@ -198,7 +197,8 @@
         padding: 200px 20px;
         
       }
- @media (min-width:405px) and (max-width:410px){
+
+      @media (min-width:405px) and (max-width:410px){
         .section{
           max-width:90%;
          
