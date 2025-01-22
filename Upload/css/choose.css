@@ -137,6 +137,7 @@
   .inner-scroll-container {
     flex-direction: column; /* Stack items vertically */
     padding: 20px; /* Reduce padding for smaller screens */
+    width: 100% !important;
   }
 
   .text {
