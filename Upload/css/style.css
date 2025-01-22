@@ -10325,8 +10325,8 @@ font-family: var(--theme-font-family);
 .button-of-moving-background{
   background-color: #007bff;
   border-radius: 20px;
-  max-width: 60%;
-  padding: 9px 10px;
+  max-width: 70%;
+  padding: 9px 25px;
   align-items: center;
   margin-top: 5px;
   margin-bottom:20px;
