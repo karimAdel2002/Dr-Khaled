@@ -255,4 +255,50 @@ align-items: center; /* Vertically center */
           color: #ccc; }
         .close-btn:hover span {
           color: #000; }
-      
+
+ @media (max-width: 768px) {
+            .custom-container {
+              display: flex;
+              flex-wrap: wrap; /* Enable wrapping */
+              gap: 10px; /* Space between items */
+            }
+          
+            /* Default style for all divs (2 per row by default) */
+            .custom-container .custom-div,
+            .custom-container .custom-div-private {
+              flex: 1 1 calc(50% - 10px); /* 50% width minus gap */
+            }
+          
+            /* Make every 3rd item span full width */
+            .custom-container .custom-div:nth-child(3n),
+            .custom-container .custom-div-private:nth-child(3n) {
+              flex: 1 1 100%; /* Full width */
+            }
+          }
+          
+          @media (max-width: 545px) {
+            /* Ensure the container is flexible */
+            .custom-container {
+              display: flex;
+              flex-wrap: wrap; /* Allow items to wrap */
+              justify-content: center; /* Center the rows */
+              gap: 5px; /* Minimize gap */
+              padding: 0; /* Remove padding if causing issues */
+            }
+          
+            /* Default for divs: 50% width (2 per row) */
+            .custom-container .custom-div,
+            .custom-container .custom-div-private {
+              flex: 1 1 calc(50% - 5px); /* Half width minus the gap */
+              max-width: calc(50% - 5px); /* Ensure no extra shrink */
+              box-sizing: border-box; /* Account for padding/borders */
+            }
+          
+            /* Make every 3rd div span the entire row */
+            .custom-container .custom-div:nth-child(3n),
+            .custom-container .custom-div-private:nth-child(3n) {
+              flex: 1 1 100%; /* Full width */
+              max-width: 100%;
+            }
+          }
+          
