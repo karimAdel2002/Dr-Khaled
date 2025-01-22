@@ -10351,7 +10351,7 @@ font-family: var(--theme-font-family);
   }
 
   .button-of-moving-background {
-    width: 80%; /* Make the button take more width on mobile */
+    width: 100%; /* Make the button take more width on mobile */
     font-size: 0.9rem; /* Adjust button text size */
   }
 }
