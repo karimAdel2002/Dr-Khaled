@@ -65,8 +65,8 @@
   }
   .scroll-image1 img {
     position: sticky !important; /* Keeps the image "movable" as you scroll */
-    min-width:300px; /* Adjust image size */
-    max-width: 400px;
+    min-width:400px; /* Adjust image size */
+    max-width: 500px;
     height: auto;
     min-height: 300px;
     border-radius: 20px;
@@ -140,7 +140,10 @@
     width: 100%;
    
   }
-
+ .scroll-image1 img{
+         min-width: 300px;
+    max-width: 400px;
+ }
   .scroll-image img, .scroll-image1 img {
     max-width: 100%; /* Scale images to fit within the screen width */
     height: auto; /* Maintain aspect ratio */
