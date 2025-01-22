@@ -10312,6 +10312,7 @@ justify-content: center;
 place-items: center;
 font-family: var(--theme-font-family);
   z-index: 2;
+  width: 90%;
 }
 .content-of-moving-background  p,h1{
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -10322,7 +10323,7 @@ font-family: var(--theme-font-family);
 .button-of-moving-background{
   background-color: #007bff;
   border-radius: 20px;
-  width: 40%;
+  max-width: 60%;
   padding: 9px 3px;
   align-items: center;
   margin-top: 5px;
