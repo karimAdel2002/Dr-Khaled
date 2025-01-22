@@ -54,7 +54,15 @@
     align-items: center ; 
 }
 
-
+.info {
+  opacity: 0; /* Initially hidden */
+  transform: translateX(100%); /* Off-screen to the left */
+  transition: all 1s ease-out;
+}
+.info.active {
+  opacity: 1; /* Fully visible */
+  transform: translateX(0); /* Move to its position */
+}
 </style>
 	<title>About Us Dr.Khaled </title>
 </head>
@@ -422,6 +430,32 @@
   // Attach the scroll event listener
   window.addEventListener("scroll", handleScroll);
 </script>
-		
+
+			{{!-- for animation --}}
+<script>
+  // Select the element to be animated
+  const infoElement = document.getElementById('info');
+
+  // Create an Intersection Observer instance
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Add the active class when the element comes into view
+          entry.target.classList.add('active');
+          // Stop observing the element after the animation starts
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      root: null, // Use the viewport as the root
+      threshold: 0.1, // Trigger when 10% of the element is visible
+    }
+  );
+
+  // Start observing the element
+  observer.observe(infoElement);
+</script>
 </body>
 </html>
