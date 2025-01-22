@@ -10112,7 +10112,7 @@ width: 100%;}
  }
   .heading-pages h1{
     font-family: var(--theme-font-family);
-    
+    font-size:22px !important;
     padding: 0px 0px;
   }
   .heading-pages p a{
