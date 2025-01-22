@@ -10275,7 +10275,7 @@ font-weight: 300;
 
 @media (max-width: 768px) {
   .img-of-container5 img {
-    max-width: 80%; /* Scale image for smaller screens */
+    max-width: 100%; /* Scale image for smaller screens */
   }
 }
 
