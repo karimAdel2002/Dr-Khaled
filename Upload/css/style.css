@@ -9160,7 +9160,7 @@ background-color: #000;}
 .section {
   padding-top: 7rem;
   padding-bottom: 7rem; 
-  width: 90%;
+  width: 100%;
 }
   @media (max-width: 991.98px) {
     .section {
