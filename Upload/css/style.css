@@ -10107,7 +10107,9 @@ width: 100%;}
   margin-bottom: 30px !important;
 }
 @media (max-width: 667px)  {
- 
+  .heading-pages{
+  padding-left: 30px;
+ }
   .heading-pages h1{
     font-family: var(--theme-font-family);
     
