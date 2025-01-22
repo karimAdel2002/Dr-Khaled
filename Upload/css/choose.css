@@ -1,15 +1,4 @@
-@media (max-width:450px){
-  .scroll-container {
-    max-width: 350px;
-  
-  }
-  .scroll-container1 {
-    max-width: 390px;
-  
-  }
- 
-  
-}
+
 
 .scroll-container {
     display: flex;
