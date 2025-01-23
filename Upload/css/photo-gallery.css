@@ -273,15 +273,17 @@ align-items: center; /* Vertically center */
             .custom-container .custom-div,
             .custom-container .custom-div-private {
               flex: 1 1 calc(50% - 10px); /* Half width minus gap */
-              max-width: calc(50% - 10px);
+              
+              min-width: calc(50% - 10px);
               box-sizing: border-box; /* Account for padding/borders */
             }
           
             /* Every 5th div spans full width (1 div per row) */
             .custom-container .custom-div:nth-child(5n),
             .custom-container .custom-div-private:nth-child(5n) {
-              flex: 1 1 100%; /* Full width */
-              max-width: 100%;
+              flex: 1 1 100% !important; /* Full width */
+              max-width: 100% ;
+              min-width: 100%;
             }
             .custom-container{
               width: 100%;
@@ -303,8 +305,9 @@ align-items: center; /* Vertically center */
             /* Default style: 2 divs per row (50% width each) */
             .custom-container .custom-div,
             .custom-container .custom-div-private {
-              flex: 1 1 calc(50% - 5px); /* Half width minus gap */
-              max-width: calc(50% - 5px);
+              flex: 1 1 calc(50% - 5px) !important; /* Half width minus gap */
+             
+              min-width: calc(50% - 5px) !important;
               box-sizing: border-box; /* Account for padding/borders */
             }
           
@@ -313,6 +316,7 @@ align-items: center; /* Vertically center */
             .custom-container .custom-div-private:nth-child(5n) {
               flex: 1 1 100%; /* Full width */
               max-width: 100%;
+              
             }
             .custom-container{
               width: 100%;
