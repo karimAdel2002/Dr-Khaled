@@ -331,7 +331,7 @@ align-items: center; /* Vertically center */
     margin: 0; /* Remove any default margins */
             }
           }
-             .container p{
+             .col-lg-5 p{
             font-weight: 350;
     color: #494949;
     font-size: 18px;
