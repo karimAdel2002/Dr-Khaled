@@ -96,6 +96,7 @@
       .custom-container .custom-row {
         flex-wrap: wrap; /* Allow wrapping */
         justify-content: center; /* Center align */
+        min-width: 100%;
       }
     
       .custom-container .custom-div,
@@ -226,5 +227,106 @@ text-align: justify;
 text-align: left !important;
 word-wrap: break-word !important; /* Ensure text breaks within the container width */
 word-spacing:normal !important;
+
+    }
+
+.custom-container{
+  width: 70% ;
+}
+    @media (max-width: 768px) {
+      .custom-container {
+        display: flex;
+        flex-wrap: wrap; /* Allow items to wrap */
+        gap: 10px; /* Space between items */
+        padding: 20px 15px;
+      }
+    
+      /* Default style: 2 divs per row (50% width each) */
+      .custom-container .custom-div-width,
+      .custom-container .custom-div-height {
+        flex: 1 1 calc(50% - 10px); /* Half width minus gap */
+        
+        min-width: calc(50% - 10px);
+        box-sizing: border-box; /* Account for padding/borders */
+      }
+    
+      /* Every 5th div spans full width (1 div per row) */
+      .custom-container .custom-div-width:nth-child(3n),
+      .custom-container .custom-div-height:nth-child(3n) {
+        flex: 1 1 100% !important; /* Full width */
+        max-width: 100% ;
+        min-width: 100%;
+      }
+      .custom-container{
+        width: 100%;
+      }
+      .photo-gallery {
+        padding: 0px 0px;
+      }
+      .icons-width{
+max-width: 100px;
+max-height: 130px;
+      }
+      .icons-height{
+        max-width: 10px;
+        max-height: 170px;
+
+      }
+      .custom-container .custom-div{
+        flex: 1 1 calc(100% - 10px); /* Half width minus gap */
+        min-width: calc(100% - 10px);
+        height: 300px;
+    }
+    .icons{
+      min-width: 95%;
+      min-height: 90%;
+    }
+  }
+    @media (max-width: 545px) {
+      .custom-container {
+        display: flex;
+        flex-wrap: wrap; /* Allow items to wrap */
+        gap: 5px; /* Smaller gap for smaller screens */
+      }
+    .custom-div-width,.custom-div-height{
+      min-width: 100px;
+    }
+      /* Default style: 2 divs per row (50% width each) */
+      .custom-container .custom-div-width,
+      .custom-container .custom-div-height {
+        flex: 1 1 calc(50% - 5px) !important; /* Half width minus gap */
+       
+        min-width: calc(50% - 5px) !important;
+        box-sizing: border-box; /* Account for padding/borders */
+      }
+    
+      /* Every 5th div spans full width (1 div per row) */
+      .custom-container .custom-div-height:nth-child(3n),
+      .custom-container .custom-div-width:nth-child(3n) {
+        flex: 1 1 100%; /* Full width */
+        max-width: 100%;
+        
+      }
+      .custom-container{
+        width: 100%;
+      }
+      .photo-gallery h1 {
+        font-size: 18px;
+        display: block; /* Ensure the heading behaves like a block-level element */
+width: 100%; /* Make sure the heading stretches across the full width */
+text-align: center; /* Center the text */
+white-space: normal; /* Allow text to wrap onto new lines */
+word-wrap: break-word !important; /* Ensure text breaks within the container width */
+margin: 0; /* Remove any default margins */
+      }
+    }
+    
+    .col-lg-5 p{
+      font-weight: 350;
+font-size: 18px;
+text-align: justify;
+text-align-last: justify; /* Ensures the last line is also justified */
+text-align: left !important;
+word-wrap: break-word !important; /* Ensure text breaks within the container width */
 
     }
