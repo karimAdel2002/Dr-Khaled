@@ -333,7 +333,7 @@ align-items: center; /* Vertically center */
           }
              .col-lg-5 p{
             font-weight: 350;
-    color: #494949;
+    
     font-size: 18px;
     text-align: justify;
     text-align-last: justify; /* Ensures the last line is also justified */
