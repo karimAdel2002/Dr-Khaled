@@ -219,3 +219,12 @@
         }
         
       }
+ .col-lg-5 p, .points{
+        font-weight: 350;
+font-size: 18px;
+text-align: justify;
+text-align: left !important;
+word-wrap: break-word !important; /* Ensure text breaks within the container width */
+word-spacing:normal !important;
+
+      }
