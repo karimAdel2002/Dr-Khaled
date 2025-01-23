@@ -10112,7 +10112,7 @@ width: 100%;}
  }
   .heading-pages h1{
     font-family: var(--theme-font-family);
-    font-size:22px !important;
+    
     padding: 0px 0px;
   }
   .heading-pages p a{
@@ -10181,7 +10181,7 @@ width: 100%;}
   align-items: center; /* Align items vertically */
   gap: 20px; /* Space between video and text */
   
-  padding: 5% 10%; /* Add some padding on the sides */
+  padding: 5% 5%; /* Add some padding on the sides */
   box-sizing: border-box; /* Ensure padding is included in width/height */
   background-color: #f0f5ff;
   width: 100%;
@@ -10231,7 +10231,7 @@ font-weight: 300;
   align-items: center; /* Align items vertically */
   gap: 20px; /* Space between video and text */
   
-  padding: 5% 10%; /* Add some padding on the sides */
+  padding: 5% 5%; /* Add some padding on the sides */
   box-sizing: border-box; /* Ensure padding is included in width/height */
  
   width: 100%;
