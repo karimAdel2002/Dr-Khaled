@@ -397,9 +397,7 @@
       navbar.classList.add("scrolled");
 
       // Update logo for scrolled state
-      if (logo.src !== scrolledLogoSrc) {
-        logo.src = scrolledLogoSrc;
-      }
+      logo.src = scrolledLogoSrc;
 
       // Update link colors
       links.forEach((link) => {
@@ -408,16 +406,14 @@
 
       // Update toggle span colors
       toggleSpans.forEach((span) => {
-        span.style.backgroundColor = "#4c4b4b"; // Black for scrolled state
+        span.style.backgroundColor = "#000"; // Black for scrolled state
       });
     } else {
       // Remove scrolled class when at the top of the page
       navbar.classList.remove("scrolled");
 
-      // Revert logo to default state
-      if (logo.src !== originalLogoSrc) {
-        logo.src = originalLogoSrc;
-      }
+      // Ensure the logo is white when at the top
+      logo.src = originalLogoSrc;
 
       // Reset link colors to inherit the default color
       links.forEach((link) => {
@@ -430,6 +426,13 @@
       });
     }
   }
+
+  // Ensure the logo is white when the page loads
+  window.addEventListener("DOMContentLoaded", () => {
+    if (window.scrollY === 0) {
+      logo.src = originalLogoSrc;
+    }
+  });
 
   // Attach the scroll event listener
   window.addEventListener("scroll", handleScroll);
