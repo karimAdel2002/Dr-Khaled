@@ -331,7 +331,7 @@ align-items: center; /* Vertically center */
     margin: 0; /* Remove any default margins */
             }
           }
-             p{
+             .container p{
             font-weight: 350;
     color: #494949;
     font-size: 18px;
@@ -339,4 +339,5 @@ align-items: center; /* Vertically center */
     text-align-last: justify; /* Ensures the last line is also justified */
     text-align: left !important;
     word-wrap: break-word !important; /* Ensure text breaks within the container width */
+
           }
