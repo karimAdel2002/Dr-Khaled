@@ -9461,7 +9461,7 @@ background-color: #000;}
       -o-transition: 0.3s all ease;
       transition: 0.3s all ease;
       overflow: hidden;
-      border-radius: 10px;
+      
       position: relative; /* Needed for child positioning */
       height: 300px; /* Maintain 16:9 aspect ratio */
     }
