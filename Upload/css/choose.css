@@ -112,6 +112,9 @@
     background-attachment: fixed; /* Keep the background fixed during scrolling */
     background-repeat: no-repeat;
     padding: 200px 20px;
+      display: flex;
+  justify-content: center;
+  align-items: center;
     
   }
 
