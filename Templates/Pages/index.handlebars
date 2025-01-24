@@ -10,7 +10,8 @@
 
 	<meta name="description" content="" />
 	<meta name="keywords" content="bootstrap, bootstrap5" />
-	
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Lora">
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;700&display=swap" rel="stylesheet">
@@ -32,7 +33,90 @@
 
 	<!-- Before </body> -->
 	
+<style>
+	.carousel1 {
+  display: flex;
+  overflow-x: scroll; /* Enable horizontal scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
 
+.carousel-inner1 {
+  display: flex;
+  gap: 10px; /* Space between items */
+}
+
+.carousel-item1 {
+  flex: 0 0 auto; /* Prevent items from shrinking or growing */
+  width: 200px; /* Adjust width as needed */
+}
+
+.carousel-image {
+  width: 100%;
+  height: 280px;
+  border-radius: 0px;
+}
+
+/* Hide scrollbar for better UX */
+.carousel1::-webkit-scrollbar {
+  display: none;
+}
+.carousel1 {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+
+.carousel1 {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    cursor: grab; /* Hand cursor */
+  }
+
+  .carousel1:active {
+    cursor: grabbing; /* Grabbing cursor while scrolling */
+  }
+
+  .carousel-item1 {
+    flex: 0 0 auto; /* Prevent items from shrinking */
+    width: 300px; /* Adjust item width */
+    margin-right: 10px;
+  }
+
+  /* Hide scrollbar for clean design */
+  .carousel1::-webkit-scrollbar {
+    display: none;
+  }
+  .carousel1 {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+  }
+
+    .carousel-image {
+    user-drag: none; /* Disable dragging */
+    user-select: none; /* Prevent text/image selection */
+    -webkit-user-drag: none; /* Disable dragging for Safari */
+    -webkit-user-select: none;
+    -ms-user-select: none; /* Disable for older browsers */
+  }
+
+ @media (max-width: 768px) {
+.home-slider{
+	width: 100%;
+	padding: 10px 15px;
+	text-align: left !important;
+}
+ .container1{
+	gap:10px !important;
+ }
+ }
+ .container1{
+	gap:30px;
+ }
+ .left1, .center1, .right1 {
+        text-align: left; /* Align content to the left */
+    }
+</style>
 	<title>DR/Khaled </title>
 </head>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
@@ -138,9 +222,9 @@
 	<!-- start  -->
 <div class="home-slider">
 	<h1 style="text-align: center;">{{Home.title}}</h1>
-	<div class="container1">
+	<div  class="container1">
 		
-        <div class="left1">{{Home.description1}}
+        <div class="left1"><h2  style="font-family:Ubuntu, sans-serif; line-height: 3rem;"><b>{{Home.description1}}</b></h2>
 
 		</div>
         <div class="center1">{{Home.description2}}</div>
@@ -151,6 +235,13 @@
 		<div class="carousel-inner1">
 			{{#each Home.images_bar}}
 			<div class="carousel-item1">
+				<img class="carousel-image" src="/images/Home/{{this}}" class="d-block w-100" alt="Slide 1">
+			</div>
+			<div class="carousel-item1">
+				<img class="carousel-image" src="/images/Home/{{this}}" class="d-block w-100" alt="Slide 1">
+			</div><div class="carousel-item1">
+				<img class="carousel-image" src="/images/Home/{{this}}" class="d-block w-100" alt="Slide 1">
+			</div><div class="carousel-item1">
 				<img class="carousel-image" src="/images/Home/{{this}}" class="d-block w-100" alt="Slide 1">
 			</div>
 			{{/each}}
@@ -205,7 +296,7 @@
 				<div class="col-lg-4">
 					<div class="widget">
 						<img style="max-height: 600px;max-width: 400px ;margin-top: -80px" class="footer-logo" src="/images/footer-logo.png" alt="">
-						<p  style="text-align-last: auto; color:white;">Aesthetic surgery specialists based in San Francisco, CA.</p>
+						<p>Aesthetic surgery specialists based in San Francisco, CA.</p>
 					</div> 
 				</div> <!-- /.col-lg-3 -->
 
@@ -214,19 +305,19 @@
 						<h3  class="footer-headers"><b>Contact</b></h3>
 						
 						<ul class="list-unstyled links mb-4">
-							<li><svg  style="color: white;" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+							<li><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
 								<path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
 							</svg>
-							<p style="color: white;">123 Main St, Anytown, USA 12345</p></li>
+							<p>123 Main St, Anytown, USA 12345</p></li>
 							<li>
-								<svg style="color: white;" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
+								<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
 									<path d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671"/>
 									<path d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791"/>
 								  </svg>
-								<a href="mailto:info@mydomain.com"><p  style="color: white;">info@mydomain.com</p></a></li>
-							<li><svg  style="color: white;" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+								<a href="mailto:info@mydomain.com"><p>info@mydomain.com</p></a></li>
+							<li><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
 								<path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
-							  </svg> <br><a href="">  <p  style="color: white;">01011111111</p></a></li>
+							  </svg><a href="">  <p>01011111111</p></a></li>
 						</ul>
 					</div> <!-- /.widget -->
 				</div> <!-- /.col-lg-3 -->
@@ -260,6 +351,7 @@
 				</div> <!-- /.col-lg-3 -->
 
 			</div> <!-- /.row -->
+
 
 		<!-- Preloader -->
 		<div id="overlayer"></div>
@@ -349,7 +441,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-<script>
+	<script>
   // Select the navbar, logo, links, and toggle spans
   const navbar = document.querySelector(".unique-navbar");
   const logo = document.querySelector(".distinct-logo img");
@@ -407,5 +499,96 @@ document.addEventListener("DOMContentLoaded", function () {
   // Attach the scroll event listener
   window.addEventListener("scroll", handleScroll);
 </script>
+
+
+{{!-- Carousel --}}
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const carousel = document.querySelector('.carousel1');
+    let isDragging = false, startX = 0, scrollLeft = 0;
+    let autoScrollInterval, pauseTimeout;
+    let isPaused = false;
+
+    // Start automatic scrolling
+    const startAutoScroll = () => {
+        stopAutoScroll(); // Ensure no duplicate intervals
+        autoScrollInterval = setInterval(() => {
+            if (!isPaused) {
+                carousel.scrollBy({
+                    left: carousel.offsetWidth,
+                    behavior: 'smooth',
+                });
+                // Reset to start when reaching the end
+                if (carousel.scrollLeft + carousel.offsetWidth >= carousel.scrollWidth) {
+                    carousel.scrollTo({ left: 0, behavior: 'smooth' });
+                }
+            }
+        }, 3000); // Change the interval duration if needed
+    };
+
+    // Stop automatic scrolling
+    const stopAutoScroll = () => {
+        clearInterval(autoScrollInterval);
+    };
+
+    // Pause auto-scroll for 2 seconds
+    const pauseAutoScroll = () => {
+        isPaused = true; // Set the pause flag
+        clearTimeout(pauseTimeout); // Reset any existing timeout
+        pauseTimeout = setTimeout(() => {
+            isPaused = false; // Resume auto-scrolling after 2 seconds
+        }, 2000); // 2-second pause
+    };
+
+    // Start drag logic
+    const startDrag = (e) => {
+        isDragging = true;
+        stopAutoScroll(); // Stop auto-scroll during manual interaction
+        startX = e.type === 'touchstart' ? e.touches[0].pageX : e.pageX;
+        scrollLeft = carousel.scrollLeft;
+        carousel.classList.add('dragging');
+    };
+
+    // Drag logic
+    const doDrag = (e) => {
+        if (!isDragging) return;
+        const x = e.type === 'touchmove' ? e.touches[0].pageX : e.pageX;
+        const distance = x - startX;
+        carousel.scrollLeft = scrollLeft - distance;
+    };
+
+    // Stop drag logic
+    const stopDrag = () => {
+        if (!isDragging) return;
+        isDragging = false;
+        carousel.classList.remove('dragging');
+        pauseAutoScroll(); // Pause auto-scroll after manual interaction
+        startAutoScroll(); // Ensure auto-scroll restarts
+    };
+
+    // Prevent image dragging inside the carousel
+    carousel.querySelectorAll('img').forEach((img) => {
+        img.setAttribute('draggable', false);
+    });
+
+    // Event listeners for drag interactions
+    carousel.addEventListener('mousedown', startDrag);
+    carousel.addEventListener('mousemove', doDrag);
+    carousel.addEventListener('mouseup', stopDrag);
+    carousel.addEventListener('mouseleave', stopDrag);
+
+    carousel.addEventListener('touchstart', startDrag);
+    carousel.addEventListener('touchmove', doDrag);
+    carousel.addEventListener('touchend', stopDrag);
+
+    // Initialize automatic scrolling
+    startAutoScroll();
+});
+
+
+</script>
+
+
+
 	</body>
 	</html>
