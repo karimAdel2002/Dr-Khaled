@@ -65,15 +65,14 @@
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
     text-align: center;
   }
-  
-  /* Navigation Arrows */
+ /* Navigation Arrows */
   .prev,
   .next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
+    background-color:transparent;
+    color: #4169E1  !important;
     border: none;
     font-size: 18px;
     padding: 10px;
@@ -84,7 +83,8 @@
   
   .prev:hover,
   .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(84, 62, 229, 0.8);
+    color: white  !important;
   }
   
   .prev {
