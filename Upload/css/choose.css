@@ -61,7 +61,7 @@
     height: auto;
     min-height: 200px;
     border-radius: 20px;
-    margin-top: 100px;
+    margin-top: 60px;
   }
   .scroll-image1 img {
     position: sticky !important; /* Keeps the image "movable" as you scroll */
