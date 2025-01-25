@@ -126,6 +126,28 @@
 			margin-right: 10px !important;
 		}
 	}
+
+	.photo-gallery {
+  display: flex; /* Enable flexbox for alignment */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-direction: column; /* Stack content vertically */
+  text-align: center; /* Ensure text aligns centrally */
+  padding: 20px; /* Add some space inside the container */
+  position: relative; /* For further positioning if needed */
+  min-height: 100vh; /* Ensures the container fills the viewport */
+}
+
+.custom-container {
+  display: flex; /* Enable flexbox for internal alignment */
+  flex-wrap: wrap; /* Allow items to wrap if necessary */
+  justify-content: center; /* Center horizontally inside the parent */
+  align-items: center; /* Center vertically inside the parent */
+  max-width: 1200px; /* Optional: Set a max width for the container */
+  width: 100%; /* Make the container responsive */
+  gap: 20px; /* Add space between child elements */
+}
+
   </style>
 	<title>Jackson-Pratt Drain Care </title>
 </head>
