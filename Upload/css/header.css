@@ -280,6 +280,9 @@
   .dropdown-menu li:last-child {
     border-bottom: none; /* Remove divider for last item */
   }
+  .dropdown-menu a {
+    font-size: 15.5px;
+  }
   
   .dropdown-link {
     display: block;
@@ -295,9 +298,9 @@
   }
   
   /* Show Dropdown on Hover */
-  .dropdown:hover .dropdown-menu {
+  .dropdown:hover > .dropdown-menu {
     display: block;
-  }
+}
   
 
 
@@ -441,4 +444,47 @@ margin-right: 40px;
 }
 .distinct-logo img {
   transition: max-width 0.3s ease, max-height 0.3s ease !important;
+}
+
+.dropdown .dropdown .dropdown-menu {
+  left: 100%; /* Position the nested dropdown to the right */
+  top: 0;
+  margin-left: 0.1rem;
+}
+/* Mobile View: Adjust nested dropdown positioning */
+@media (max-width: 1000px) {
+  .dropdown .dropdown .dropdown-menu {
+    left: 0; /* Align nested dropdown to the left */
+    top: 100%; /* Position below the parent item */
+    margin-left: 0; /* Remove margin */
+    width: 100%; /* Full width for better visibility */
+  }
+
+  
+}
+/* Mobile View: Stack dropdown menus vertically */
+@media (max-width: 1000px) {
+  .dropdown-menu {
+    position: static; /* Reset position for mobile */
+    display: none; /* Hide by default */
+
+  }
+
+  .dropdown:hover > .dropdown-menu {
+    display: block; /* Show dropdown on hover */
+  }
+
+}
+/* Mobile View: Adjust nested dropdown for "Out of Town Patients" */
+@media (max-width: 1000px) {
+  .dropdown .dropdown .dropdown-menu {
+    left: 0; /* Align nested dropdown to the left */
+    top: 100%; /* Position below the parent item */
+    margin-left: 0; /* Remove margin */
+    width: 100%; /* Full width for better visibility */
+  }
+
+  .dropdown.open > .dropdown-menu {
+    display: block; /* Show dropdown when parent has the 'open' class */
+  }
 }

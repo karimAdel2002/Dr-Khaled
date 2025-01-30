@@ -9839,6 +9839,11 @@ text-decoration: none; }
         .site-footer ul{
         color: white !important;
         }
+        .Copyright{
+          text-align: center;
+    font-size: 16px; /* Default size */
+    padding: 10px;
+        }
         /* Ensure Contact header stays left-aligned on mobile */
     @media (max-width: 768px) {
       .site-footer .widget h3, 
@@ -9852,6 +9857,9 @@ text-decoration: none; }
       .site-footer .widget ul {
           padding-left: 10px; /* Optional: add padding to the list items */
       }
+      .Copyright {
+        font-size: 12px; /* Smaller font size for mobile */
+    }
     }
     
         .site-footer .widget .links {

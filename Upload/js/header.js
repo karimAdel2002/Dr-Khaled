@@ -33,3 +33,23 @@ window.onclick = function (event) {
 
 // Trigger the modal logic when the page loads
 window.onload = showModal;
+
+// Get all dropdown elements
+const dropdowns = document.querySelectorAll('.dropdown');
+
+// Loop through each dropdown
+dropdowns.forEach(dropdown => {
+    const link = dropdown.querySelector('.dropdown-link');
+
+    // Toggle dropdown menu on click
+    link.addEventListener('click', (e) => {
+        dropdown.classList.toggle('open'); // Toggle the 'open' class
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!dropdown.contains(e.target)) {
+            dropdown.classList.remove('open');
+        }
+    });
+});

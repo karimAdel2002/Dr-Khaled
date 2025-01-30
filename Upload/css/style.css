@@ -9824,7 +9824,7 @@ width: 100%;}
       font-weight: bold; 
     }
     .site-footer .widget .links {
-      width: 150px; }
+      width: 250px; }
       .site-footer .widget .links li {
         margin-bottom: 10px; }
         .site-footer .widget .links li a {
@@ -9855,6 +9855,11 @@ width: 100%;}
         .footer-headers{
           color: white !important;
         }
+        .Copyright{
+          text-align: center;
+    font-size: 16px; /* Default size */
+    padding: 10px;
+        }
  /* Ensure Contact header stays left-aligned on mobile */
 @media (max-width: 768px) {
   .site-footer .widget h3, 
@@ -9867,6 +9872,9 @@ width: 100%;}
   .site-footer .widget ul {
       padding-left: 10px; /* Optional: add padding to the list items */
   }
+  .Copyright {
+    font-size: 12px; /* Smaller font size for mobile */
+}
 }
 
 .home-slider{
@@ -9901,7 +9909,6 @@ width: 100%;}
 }
 .carousel-inner1 {
   display: flex;
-  animation: scroll 5s linear infinite;
   align-items: center;
   width: 150px;
   
@@ -9916,14 +9923,6 @@ width: 100%;}
   height: 300px;
 }
 
-@keyframes scroll {
-  0% {
-      transform: translateX(0);
-  }
-  100% {
-      transform: translateX(-100%);
-  }
-}
 .container1 {
   display: flex;
   flex-wrap: wrap; /* Allow wrapping */
