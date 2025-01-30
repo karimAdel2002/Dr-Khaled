@@ -69,10 +69,10 @@ export const Public_images = async (req, res) => {
         const { id } = req.params;
         const Photo_Gallaries_images = await Photo_Gallary_images.findOne({ _id: id }).lean();
         const First_Image = Photo_Gallaries_images.images[0]
-        const all_images = Photo_Gallaries_images.images
+        const all_images = Photo_Gallaries_images.images.slice(1);  // All remaining images excluding the first one
         const Photo_Gallariess = await Photo_Gallaries.find({}).lean();
 
-        res.render('Pages/Gallery', { Photo_Gallaries_images, Photo_Gallariess, First_Image, all_images: JSON.stringify(all_images) })
+        res.render('Pages/Gallery', { Photo_Gallaries_images, Photo_Gallariess, First_Image, all_images })
     } catch (error) {
         console.error(error);
         res.status(500).render("Pages/404", { error });
@@ -106,11 +106,11 @@ export const Private_images = async (req, res) => {
         if (isPasswordValid) {
             // Fetch gallery images and render the page
             const Photo_Gallaries_images = await Photo_Gallary_images.findOne({ _id: id }).lean();
-            const First_Image = Photo_Gallaries_images.images[0];
+            const First_Image = Photo_Gallaries_images.images[0]
+            const all_images = Photo_Gallaries_images.images.slice(1);  // All remaining images excluding the first one
             const Photo_Gallariess = await Photo_Gallaries.find({}).lean();
-            const all_images = Photo_Gallaries_images.images
 
-            return res.render('Pages/Gallery', { Photo_Gallariess, Photo_Gallaries_images, First_Image, all_images: JSON.stringify(all_images) });
+            return res.render('Pages/Gallery', { Photo_Gallariess, Photo_Gallaries_images, First_Image, all_images });
         } else {
             return res.status(204).send()
         }

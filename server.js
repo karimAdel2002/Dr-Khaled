@@ -1,5 +1,7 @@
 import  express from 'express';
 import { engine } from 'express-handlebars';
+import Handlebars from 'handlebars';
+
 import dotenv from 'dotenv';
 dotenv.config();
 import methodOverride from 'method-override';
@@ -18,6 +20,7 @@ import Questions_And_Answer_route from "./Routes/Questions_And_Answer_route.js"
 import Blog_route from "./Routes/Blog_route.js"
 import Read_More_route from "./Routes/Read_More_route.js"
 import Photo_Gallary_route from "./Routes/Photo_Gallary_route.js"
+import Out_of_town_route from "./Routes/Out_of_town_route.js"
 
 import mongoose from 'mongoose';
 import { fileURLToPath } from 'url';
@@ -32,7 +35,9 @@ app.engine('handlebars', engine());
 app.set('view engine', 'handlebars');
 const viewsPath = join(__dirname, 'Templates');
 app.set('views', viewsPath);
-
+Handlebars.registerHelper('add', function(a, b) {
+    return a + b;
+});
 // Serve static files
 app.use(express.static(join(__dirname, 'Templates')));
 app.use(express.static(join(__dirname, 'Upload')));
@@ -52,6 +57,7 @@ app.use('/Questions_And_Answer',Questions_And_Answer_route);
 app.use('/Blog',Blog_route);
 app.use('/Read_More',Read_More_route);
 app.use('/Photo_Gallary',Photo_Gallary_route);
+app.use('/Out_of_town',Out_of_town_route);
 
 async function connectToDatabase() {
     try {
