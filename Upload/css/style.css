@@ -10302,6 +10302,8 @@ font-weight: 300;
   z-index: 1; /* Overlay sits above the background but below the text */
 }
 .content-of-moving-background {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -10320,6 +10322,9 @@ font-family: var(--theme-font-family);
   font-family: var(--theme-font-family);
   word-spacing: 3px;
   padding: 18px 0;
+   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .button-of-moving-background{
   background-color: #007bff;
@@ -10337,6 +10342,9 @@ font-family: var(--theme-font-family);
   color: white;
   text-decoration: none;
   font-family: var(--theme-font-family);
+  display: block;
+  width: 100%;
+  text-align: center;
  
 }
 @media (max-width: 768px) {
@@ -10353,8 +10361,8 @@ font-family: var(--theme-font-family);
   }
 
   .button-of-moving-background {
-    width: 100%; /* Make the button take more width on mobile */
-    font-size: 0.9rem; /* Adjust button text size */
+    width: 100%; /* Make it take the full width */
+    font-size: 0.8rem; /* Adjust button text size */
   }
 }
 
