@@ -9797,7 +9797,7 @@ text-decoration: none; }
 
 .site-footer {
   background: #0E1A3C;
-  font-size: 14px;
+  font-size: 15px;
   color: white;
   padding: 70px 0; 
 width: 100%;}
@@ -9818,9 +9818,9 @@ width: 100%;}
     position: relative;
     z-index: 1; }
      .site-footer .widget h3, .site-footer .widget .h3 {
-      font-size: 17px;
+      font-size: 20px;
       color: white;
-      margin-bottom: 5px;
+      margin-bottom: 15px;
       font-weight: bold; 
     }
     .site-footer .widget .links {
@@ -9868,12 +9868,15 @@ width: 100%;}
       text-align: left; /* Align text to the left */
       padding-left: 10px !important; /* Optional: adjust padding */
   }
-
+  .site-footer .widget svg{
+    text-align: left; /* Align text to the left */
+    padding-left: 10px !important; /* Optional: adjust padding */
+}
   .site-footer .widget ul {
-      padding-left: 10px; /* Optional: add padding to the list items */
+      padding-left: 10px !important; /* Optional: add padding to the list items */
   }
   .Copyright {
-    font-size: 12px; /* Smaller font size for mobile */
+    font-size: 12px !important; /* Smaller font size for mobile */
 }
 }
 
