@@ -23,20 +23,20 @@ var swiper = new Swiper(".swiper", {
     },
     breakpoints: {
         0: {
-            slidesPerView: 1.2, // Adjust for smaller screens
-            spaceBetween: 5,
+            slidesPerView: 1.5, // Adjust for smaller screens
+            spaceBetween: 0,
         },
         576: {
             slidesPerView: 1.5, // Adjust for screens >= 576px
-            spaceBetween: 10,
+            spaceBetween: 0,
         },
         768: {
             slidesPerView: 1.5, // Adjust for screens >= 768px
-            spaceBetween: 15,
+            spaceBetween: 0,
         },
         1200: {
             slidesPerView: 1.8, // Adjust for screens >= 1200px
-            spaceBetween: 20,
+            spaceBetween: 0,
         },
     }
 });
@@ -56,16 +56,56 @@ function flipActiveSlide() {
     }
 
     if (iframe) {
-        iframe.addEventListener("click", (event) => {
-            event.stopPropagation(); // Prevent event bubbling to the slide
+        let isScrolling = false; // Track if the user is scrolling
+        let isClick = false; // Track if the user is clicking (not scrolling)
+
+        // Handle mouse events
+        iframe.addEventListener("mousedown", () => {
+            isClick = true; // User is clicking
         });
 
+        iframe.addEventListener("mousemove", () => {
+            if (isClick) {
+                isScrolling = true; // User is scrolling
+            }
+        });
+
+        iframe.addEventListener("mouseup", () => {
+            if (isClick && !isScrolling) {
+                // If it's a click (not a scroll), play/pause the video
+                iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+            }
+            isClick = false; // Reset click tracking
+            isScrolling = false; // Reset scroll tracking
+        });
+
+        // Handle touch events for mobile devices
+        iframe.addEventListener("touchstart", () => {
+            isClick = true; // User is touching
+        });
+
+        iframe.addEventListener("touchmove", () => {
+            if (isClick) {
+                isScrolling = true; // User is scrolling
+            }
+        });
+
+        iframe.addEventListener("touchend", () => {
+            if (isClick && !isScrolling) {
+                // If it's a tap (not a scroll), play/pause the video
+                iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+            }
+            isClick = false; // Reset touch tracking
+            isScrolling = false; // Reset scroll tracking
+        });
+
+        // Disable Swiper scroll when hovering over the video
         iframe.addEventListener("mouseenter", () => {
-            swiper.mousewheel.disable(); // Disable swiper scroll when hovering over the video
+            swiper.mousewheel.disable();
         });
 
         iframe.addEventListener("mouseleave", () => {
-            swiper.mousewheel.enable(); // Re-enable swiper scroll when leaving the video
+            swiper.mousewheel.enable();
         });
     }
 }
