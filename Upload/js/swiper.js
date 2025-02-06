@@ -58,15 +58,24 @@ function flipActiveSlide() {
     if (iframe) {
         let isScrolling = false; // Track if the user is scrolling
         let isClick = false; // Track if the user is clicking (not scrolling)
+        let mouseMoveThreshold = 5; // Threshold to differentiate between click and scroll
+        let startX, startY;
 
         // Handle mouse events
-        iframe.addEventListener("mousedown", () => {
+        iframe.addEventListener("mousedown", (event) => {
             isClick = true; // User is clicking
+            startX = event.clientX;
+            startY = event.clientY;
         });
 
-        iframe.addEventListener("mousemove", () => {
+        iframe.addEventListener("mousemove", (event) => {
             if (isClick) {
-                isScrolling = true; // User is scrolling
+                const deltaX = Math.abs(event.clientX - startX);
+                const deltaY = Math.abs(event.clientY - startY);
+                if (deltaX > mouseMoveThreshold || deltaY > mouseMoveThreshold) {
+                    isScrolling = true; // User is scrolling
+                    iframe.style.pointerEvents = "none"; // Disable iframe interactions during scroll
+                }
             }
         });
 
@@ -77,16 +86,24 @@ function flipActiveSlide() {
             }
             isClick = false; // Reset click tracking
             isScrolling = false; // Reset scroll tracking
+            iframe.style.pointerEvents = "auto"; // Re-enable iframe interactions
         });
 
         // Handle touch events for mobile devices
-        iframe.addEventListener("touchstart", () => {
+        iframe.addEventListener("touchstart", (event) => {
             isClick = true; // User is touching
+            startX = event.touches[0].clientX;
+            startY = event.touches[0].clientY;
         });
 
-        iframe.addEventListener("touchmove", () => {
+        iframe.addEventListener("touchmove", (event) => {
             if (isClick) {
-                isScrolling = true; // User is scrolling
+                const deltaX = Math.abs(event.touches[0].clientX - startX);
+                const deltaY = Math.abs(event.touches[0].clientY - startY);
+                if (deltaX > mouseMoveThreshold || deltaY > mouseMoveThreshold) {
+                    isScrolling = true; // User is scrolling
+                    iframe.style.pointerEvents = "none"; // Disable iframe interactions during scroll
+                }
             }
         });
 
@@ -97,6 +114,7 @@ function flipActiveSlide() {
             }
             isClick = false; // Reset touch tracking
             isScrolling = false; // Reset scroll tracking
+            iframe.style.pointerEvents = "auto"; // Re-enable iframe interactions
         });
 
         // Disable Swiper scroll when hovering over the video
