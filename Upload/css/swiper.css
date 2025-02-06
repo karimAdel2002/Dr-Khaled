@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Nanum+Gothic&display=swap');
 
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 
 /* Swiper Container */
 .swiper {
@@ -195,6 +187,7 @@
 /* Swiper Pagination */
 .swiper-pagination {
     bottom: 10px; /* Adjusted position for mobile */
+
 }
 
 .swiper-pagination-bullet {
@@ -209,73 +202,44 @@
     width: 24px; /* Smaller active bullet size for mobile */
     background-color: #717271;
     border-radius: 12px; /* Smaller border radius for mobile */
+
 }
 
 /* Media Query for Mobile Screens */
 @media (max-width: 768px) {
-    .swiper {
-        width: 100%; /* Ensure Swiper takes full width of its container */
-        padding-bottom: 15px; /* Adjust padding for smaller screens */
-    }
+    .swiper{
+        width: 100% !important; /* Wider button for better touch interaction */
+        height: 30%;
+        padding-bottom: 20px; /* Reduced padding for mobile */
 
+    }
     .swiper-slide {
-        height: 300px; /* Adjust height for smaller screens */
-        border-radius: 10px; /* Smaller border radius for smaller screens */
+        height: 400px; /* Reduced height for mobile */
+        border-radius: 10px; /* Smaller border radius for mobile */
+        width: 66.6% !important; /* Wider button for better touch interaction */
+
     }
 
     .swiper-slide-active .back p {
-        font-size: 0.6rem; /* Smaller font size for smaller screens */
+        font-size: 0.7rem; /* Smaller font size for smaller screens */
         line-height: 1;
     }
 
     .swiper-slide button {
         font-size: 0.6rem; /* Smaller font size for smaller screens */
-        padding: 4px 0; /* Further reduced padding for smaller screens */
-        width: 80%; /* Wider button for better touch interaction */
+        padding: 5px 0; /* Further reduced padding for smaller screens */
+        width: 20%; /* Wider button for better touch interaction */
     }
 
     .swiper-pagination-bullet {
-        width: 8px; /* Smaller bullet size for smaller screens */
-        height: 8px; /* Smaller bullet size for smaller screens */
+        width: 10px; /* Smaller bullet size for smaller screens */
+        height: 10px; /* Smaller bullet size for smaller screens */
     }
 
     .swiper-pagination-bullet-active {
-        width: 16px; /* Smaller active bullet size for smaller screens */
-        border-radius: 8px; /* Smaller border radius for smaller screens */
-    }
-}
-
-
-/* Media Query for Screens Less Than 576px */
-@media (max-width: 576px) {
-    .swiper {
-        width: 100%; /* Ensure Swiper takes full width of its container */
-        padding-bottom: 15px; /* Adjust padding for smaller screens */
-    }
-
-    .swiper-slide {
-        height: 300px; /* Adjust height for smaller screens */
+        width: 20px; /* Smaller active bullet size for smaller screens */
         border-radius: 10px; /* Smaller border radius for smaller screens */
     }
 
-    .swiper-slide-active .back p {
-        font-size: 0.6rem; /* Smaller font size for smaller screens */
-        line-height: 1;
-    }
-
-    .swiper-slide button {
-        font-size: 0.6rem; /* Smaller font size for smaller screens */
-        padding: 4px 0; /* Further reduced padding for smaller screens */
-        width: 80%; /* Wider button for better touch interaction */
-    }
-
-    .swiper-pagination-bullet {
-        width: 8px; /* Smaller bullet size for smaller screens */
-        height: 8px; /* Smaller bullet size for smaller screens */
-    }
-
-    .swiper-pagination-bullet-active {
-        width: 16px; /* Smaller active bullet size for smaller screens */
-        border-radius: 8px; /* Smaller border radius for smaller screens */
-    }
+    
 }
