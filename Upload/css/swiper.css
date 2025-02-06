@@ -45,7 +45,7 @@
     height: 100%;
     border: none;
     border-radius: 15px;
-    pointer-events: auto; /* Allow interactions */
+    pointer-events: auto; /* Allow interactions with the iframe */
 }
 
 /* Ensure other elements like images and buttons don't block the video */
@@ -144,7 +144,7 @@
 .swiper-slide img {
     object-fit: cover;
     border-radius: 15px; /* Smaller border radius for mobile */
-    pointer-events: none;
+    pointer-events: none; /* Prevent interactions with images */
 }
 
 .swiper-slide button {
@@ -171,7 +171,7 @@
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     opacity: 0;
-    pointer-events: none;
+    pointer-events: auto; /* Allow button interactions */
     will-change: transform;
 }
 
@@ -228,7 +228,7 @@
     .swiper-slide button {
         font-size: 0.6rem; /* Smaller font size for smaller screens */
         padding: 5px 0; /* Further reduced padding for smaller screens */
-        width: 20%; /* Wider button for better touch interaction */
+        width: 40%; /* Wider button for better touch interaction */
     }
 
     .swiper-pagination-bullet {
