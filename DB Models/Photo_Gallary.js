@@ -5,8 +5,12 @@ const Photo_Gallary = new Schema(
             type: String,
             required: false
         },
-        image: {
-            type: String,
+        Swiper: {
+            type :  [String],
+            required: true
+        },
+        Swiper_Text: {
+            type :  [String],
             required: true
         },
         title: {

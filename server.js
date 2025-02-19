@@ -29,18 +29,46 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const app = express();
-app.use(express.urlencoded({extended:true}));
-app.use(methodOverride('_method'))
-app.engine('handlebars', engine());
+app.use(express.urlencoded({extended: true}));
+app.use(methodOverride('_method'));
+
+// Configure Handlebars with partials directory
+app.engine('handlebars', engine({
+    // Use partialsDirs instead of partialsDir (partialsDir is deprecated)
+    partialsDir: [
+        join(__dirname, 'Qapartials'),
+        join(__dirname, 'Templates', 'partials')
+    ],
+    extname: '.handlebars',
+    defaultLayout: 'main',
+    layoutsDir: join(__dirname, 'Templates', 'layouts'),
+    helpers: {
+        add: function(a, b) {
+            return a + b;
+        },
+    }
+}));
+
+
 app.set('view engine', 'handlebars');
 const viewsPath = join(__dirname, 'Templates');
 app.set('views', viewsPath);
 Handlebars.registerHelper('add', function(a, b) {
     return a + b;
 });
+// Add error handling for missing partials
+Handlebars.registerHelper('partial', function(name) {
+    if (Handlebars.partials[name]) {
+        return new Handlebars.SafeString(Handlebars.partials[name]);
+    } else {
+        console.warn(`Partial ${name} not found`);
+        return '';
+    }
+});
 // Serve static files
 app.use(express.static(join(__dirname, 'Templates')));
 app.use(express.static(join(__dirname, 'Upload')));
+app.use(express.static(join(__dirname, 'Qapartials')));
 
 app.use('/',Home_route);
 app.use('/Home',Home_route);
@@ -58,6 +86,19 @@ app.use('/Blog',Blog_route);
 app.use('/Read_More',Read_More_route);
 app.use('/Photo_Gallary',Photo_Gallary_route);
 app.use('/Out_of_town',Out_of_town_route);
+
+
+
+// Error handlers
+app.use('/Qapartials/*', (req, res, next) => {
+    console.error('Partial not found:', req.url);  // Add logging
+    res.status(404).send('Partial not found');
+});
+
+app.use((err, req, res, next) => {
+    console.error('Error stack:', err.stack);  // Add detailed logging
+    res.status(500).render('error', { error: err }); // Render error page instead of plain text
+});
 
 async function connectToDatabase() {
     try {

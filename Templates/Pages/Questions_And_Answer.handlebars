@@ -1,4 +1,4 @@
-
+ 
 <!doctype html>
 <html lang="en">
 <head>
@@ -18,7 +18,6 @@
 
 	<link rel="stylesheet" href="/fonts/icomoon/style.css">
 	<link rel="stylesheet" href="/fonts/flaticon/font/flaticon.css">
-
 	<link rel="stylesheet" href="/css/tiny-slider.css">
 	<link rel="stylesheet" href="/css/aos.css">
 	<link rel="stylesheet" href="/css/flatpickr.min.css">
@@ -26,6 +25,8 @@
 	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="/css/blog.css">
 	<link rel="stylesheet" href="/css/header.css">
+		<link rel="stylesheet" href="/css/categories.css">
+
 		<link rel="stylesheet" href="/css/blog-2.css">
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -118,51 +119,8 @@
 font-family: Verdana, sans-serif;
 	}
 	/* General container styles */
-.categories-container {
-  width: 80%;
-  margin: 0 auto; /* Center horizontally */
-  padding: 20px;
-  background-color: #f9f9f9; /* Optional background color */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
-  margin-top: 20PX;
-}
+/* Container with modern gradient */
 
-/* Heading style */
-.categories-container h2 {
-  color: #007bff; /* Blue heading */
-  font-size: 1.5em;
-  margin-bottom: 10px;
-  text-align: left;
-}
-
-/* Categories grid */
-.categories {
-  display: flex;
-  flex-wrap: wrap; /* Wrap items to the next line when needed */
-  gap: 10px; /* Space between items */
-}
-
-/* Individual category styles */
-.category-item {
-  flex: 1 1 calc(50% - 10px); /* Two items per row on larger screens */
-  text-align: left;
-  color: #333;
-  font-size: 1em;
-}
-.category-item a{
-	text-decoration: none;
-	  color: #333;
-	  font-family: Verdana, sans-serif;
-
-
-}
-/* Responsive behavior */
-@media (max-width: 768px) {
-  .category-item {
-    flex: 1 1 100%; /* One item per row on small screens */
-  }
-}
 
 
 .accordion-body{
@@ -179,6 +137,16 @@ font-family: Verdana, sans-serif;
   
    
 }
+
+/* Accordion Components */
+.accordion-collapse {
+    transition: all 0.3s ease;
+}
+
+.custom-accordion {
+    isolation: isolate;
+    position: relative;
+}
 	.categories-container
  {
   background-color: #ffffff;
@@ -189,6 +157,12 @@ font-family: Verdana, sans-serif;
   overflow-y: auto; /* Enable vertical scrolling */
   overflow-x: hidden; /* Disable horizontal scrolling */
 }
+	.categories {
+  display: grid;
+  grid-template-columns: repeat(4); /* Four columns on desktop */
+  gap: 15px; /* Space between groups */
+}
+
 
 /* Custom scrollbar styling for the categories container */
 .categories-container::-webkit-scrollbar
@@ -212,7 +186,200 @@ font-family: Verdana, sans-serif;
   background: #f1f1f1;
 }
 </style>
-	<title> Q & A trial </title>
+</style>
+
+<style>
+    .search-container {
+        width: 80%;
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+
+    .search-wrapper {
+        position: relative;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .search-box {
+        position: relative;
+        width: 100%;
+        background: #fff;
+        border-radius: 25px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .search-box input {
+        width: 100%;
+        padding: 15px 50px 15px 20px;
+        border: 1px solid #e0e0e0;
+        border-radius: 25px;
+        font-size: 16px;
+        transition: all 0.3s ease;
+    }
+
+    .search-box input:focus {
+        border-color: #007bff;
+        outline: none;
+        box-shadow: 0 3px 8px rgba(0,123,255,0.2);
+    }
+
+    .search-icon {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #666;
+    }
+</style>
+
+		<style>
+
+  .qa-container {
+    margin-bottom: 30px;
+  }
+
+  .question {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+  }
+			.qa-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.qa-wrapper > * {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+
+  .answer {
+    font-size: 1em;
+    color: #34495e;
+  }
+
+  /* Text formatting */
+  p {
+    margin-bottom: 15px;
+    text-align: justify;
+  }
+
+  h2 {
+    color: #2980b9;
+    border-bottom: 1px solid #bdc3c7;
+    padding-bottom: 5px;
+    margin-top: 20px;
+  }
+
+  strong, b {
+    font-weight: bold;
+    color: #16a085;
+  }
+
+  u {
+    text-decoration: underline;
+    text-decoration-color: #e74c3c;
+  }
+
+  /* Lists */
+  ul, ol {
+    padding-left: 20px;
+    margin-bottom: 15px;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
+
+  /* Tables */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  th, td {
+    border: 1px solid #bdc3c7;
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #ecf0f1;
+    font-weight: bold;
+  }
+
+  /* Code blocks */
+  code {
+    background-color: #f0f0f0;
+    border-radius: 3px;
+    padding: 2px 4px;
+    font-family: 'Courier New', monospace;
+  }
+
+  pre {
+    background-color: #f0f0f0;
+    border-radius: 3px;
+    padding: 10px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /* Blockquotes */
+  blockquote {
+    border-left: 4px solid #3498db;
+    padding-left: 15px;
+    color: #7f8c8d;
+    font-style: italic;
+    margin: 15px 0;
+  }
+
+/* Add to match your inline style example */
+.category-highlight {
+    font-weight: bold;
+    color: #007bff !important; /* Override other styles */
+    border-left: 3px solid currentColor;
+    padding-left: 10px;
+}
+/* Add to your existing styles */
+.special-text {
+    color: #007bff; /* Solid blue color */
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+}
+
+.special-text {
+    color: #007bff !important; /* Force blue color */
+    font-weight: bold;
+    position: relative;
+    display: inline;  /* Changed from inline-block */
+    padding-bottom: 2px; /* Space for underline */
+    text-decoration: none;
+    background: none; /* Remove gradient background */
+    -webkit-text-fill-color: initial; /* Remove transparent text */
+}
+
+.special-text::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%; /* Full width underline */
+    height: 2px;
+    background-color: rgba(0, 123, 255, 0.3); /* Semi-transparent blue */
+    transition: width 0.3s ease;
+}
+		</style>
+	
+	<title> Q&As </title>
 </head>
 <body>
 
@@ -353,103 +520,57 @@ font-family: Verdana, sans-serif;
   </div>
 </div> --}}
 
-<div style="width: 85%; ">
-<div class="categories-container">
-  <h2>Categories</h2>
-  <div class="categories">
-    <div class="category-item"><a href="#skull">SKULL BASE SURGERY</a></div>
-    <div class="category-item"><a href="#skull">SKULL BASE SURGERY</a></div>
-    <div class="category-item"><a href="#skull">SKULL BASE SURGERY</a></div>
-    <div class="category-item"><a href="#skull">SKULL BASE SURGERY</a></div>
+<script src="/js/search.js"></script>
+	
+<div class="search-container">
+    <div class="search-wrapper">
+        <div class="search-box">
+            <input type="text" id="categorySearch" placeholder="Search categories & questions...">
+            <div class="search-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="search-results-count"></div>
+</div>
+
+<script src="/js/categoryManager.js"></script>
+
+	
+
+<div style="width: 85%;">
+  <div class="categories-container">
+    <h2>Categories</h2>
+    <div class="categories">
+      <!-- Empty container: the external JS will generate and insert category items here -->
+    </div>
   </div>
 </div>
 
-   <!-- FAQ 3 - Bootstrap Brain Component -->
 <section class="bsb-faq-3 py-3 py-md-5 py-xl-8">
   <div class="container">
     <div class="row justify-content-md-center">
       <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-        
-       
+         <div class="search-results-count"></div>
       </div>
     </div>
-  </div>
-
-  <!-- FAQs: My Account -->
-  <div class="mb-8">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-11 col-xl-10">
-          <div class="d-flex align-items-end mb-5">
+    <div class="row justify-content-md-center">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+          {{> Breast}}
           
-            <h3 class="m-0" id="skull">SKULL BASE SURGERY</h3>
-          </div>
-        </div>
-        <div class="col-11 col-xl-10" >
-         <div class="col-lg-5 mt-4 mt-lg-0"  data-aos="fade-up" data-aos-delay="100" style="width: 100% !important;">
-
-				<div class="custom-accordion" id="accordion_1" >
-					<div class="accordion-item">
-						<h2 class="mb-0">
-							<button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Education, Credentials & Appointments</button>
-						</h2>
-
-						<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-bs-parent="#accordion_1">
-							<div class="accordion-body">
-								Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
-							</div>
-						</div>
-					</div> <!-- .accordion-item -->
-
-					<div class="accordion-item">
-						<h2 class="mb-0">
-							<button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Board Certifications</button>
-						</h2>
-						<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion_1">
-							<div class="accordion-body">
-								A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
-							</div>
-						</div>
-					</div> <!-- .accordion-item -->
-					<div class="accordion-item">
-						<h2 class="mb-0">
-							<button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Ethics & Safety</button>
-						</h2>
-
-						<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordion_1">
-							<div class="accordion-body">
-								When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.
-							</div>
-						</div>
-
-					</div> <!-- .accordion-item -->
-
-
-					<div class="accordion-item">
-						<h2 class="mb-0">
-							<button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">Personal</button>
-						</h2>
-
-						<div id="collapseFour" class="collapse" aria-labelledby="headingThree" data-bs-parent="#accordion_1">
-							<div class="accordion-body">
-								When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.
-							</div>
-						</div>
-						
-					</div> <!-- .accordion-item -->
-					
-				</div>
-				
-			</div>
-        </div>
+    </div>
       </div>
     </div>
-  </div>
-
-
 </section>
-</div>	
 
+</div>
+
+	
+		
+   
 <!-- Back to Top and Bottom Button -->
 <div class="scroll-buttons">
     <button id="scrollTopBtn">⬆ </button>
@@ -695,5 +816,8 @@ font-family: Verdana, sans-serif;
   window.addEventListener("scroll", handleScroll);
 </script>
 
+
+
+	
 	</body>
 	</html>
