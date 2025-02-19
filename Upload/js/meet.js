@@ -45,3 +45,4 @@ function updateSlider() {
 setInterval(() => {
   changeSlide(1);
 }, 5000);
+

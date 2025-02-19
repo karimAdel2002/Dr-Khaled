@@ -209,12 +209,12 @@
 @media (max-width: 768px) {
     .swiper{
         width: 100% !important; /* Wider button for better touch interaction */
-        height: 30%;
+        height: 40%;
         padding-bottom: 20px; /* Reduced padding for mobile */
 
     }
     .swiper-slide {
-        height: 400px; /* Reduced height for mobile */
+        height: 500px; /* Reduced height for mobile */
         border-radius: 10px; /* Smaller border radius for mobile */
         width: 66.6% !important; /* Wider button for better touch interaction */
 
